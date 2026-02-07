@@ -1,0 +1,379 @@
+/*Phần header*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header.fixed {
+  position: sticky;
+  top: -16px;
+}
+
+.logo img {
+  height: 70px;
+}
+header {
+  z-index: 100;
+}
+
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.gio_hang {
+  padding: 24px;
+}
+.gio_hang img {
+  width: 28px;
+  padding: 10px;
+}
+/* san pham */
+.container {
+  background-color: rgb(248, 247, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  text-decoration: none;
+  padding: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e2e2e2;
+}
+
+.search-box input {
+  height: 50px;
+  font-size: 18px;
+  box-sizing: border-box;
+  transition: all 0.6s ease-out;
+}
+
+.search-box input[type="text"] {
+  width: 700px;
+  border-right: none;
+}
+
+.search-box input[type="submit"] {
+  width: 100px;
+  cursor: pointer;
+  background-color: rgb(112, 209, 209);
+  color: white;
+}
+.search-box input[type="submit"]:hover {
+  background-color: rgb(66, 111, 111);
+}
+
+/*phần main*/
+/*section nav trong trang chitiet.html*/
+.nav-main {
+  background-color: #e2e2e2;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.nav-main a {
+  color: black;
+  opacity: 70%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*section chi tiết của 1 quyển sách*/
+.item {
+  /*khối chứa chi tiết quyển sách đang xem*/
+
+  max-width: 1400px;
+  margin: 100px auto; /* CĂN GIỮA */
+  padding: 0 20px;
+  display: flex;
+}
+.left-item {
+  /*khối bên trái chứa ảnh con và ảnh lớn*/
+  display: flex;
+  flex-direction: column;
+  background-color: #ebeeed;
+  border-radius: 20px;
+  padding: 10px;
+}
+.item-image {
+  /*điều chỉnh khối chứa 2 button < , > và ảnh lớn */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-image img {
+  /*điều chỉnh kích thước của ảnh lớn */
+  width: 300px;
+  height: 390px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.slider-wrapper {
+  /*khối xác định lề của các ảnh con*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto;
+}
+
+.slider-container {
+  /*xác định độ rộng của khối chứa ảnh nhỏ */
+  width: 300px; /* khung hiển thị */
+  overflow-x: scroll; /* ẨN ảnh thừa */
+  align-items: center;
+}
+
+.slider-track {
+  /*cách thức hiển thị trên màn hình của các ảnh c0n: --> ngang */
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider-track img {
+  /*điều chỉnh kích thước của ảnh nhỏ*/
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Nút < > */
+.slider-btn {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  line-height: 1;
+
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+.center-item {
+  /*khối giữa chứa các thông tin khi mua sách */
+  width: 500px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 20px;
+}
+.info {
+  /* khối để xác định kiểu chữ, phông chữ của tt khi mua sách*/
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+}
+.info h2:nth-of-type(2) {
+  font-size: 13px;
+  opacity: 30%;
+}
+.info span {
+  font-size: 20px;
+  padding: 10px;
+  align-items: center;
+}
+.info h2:last-of-type {
+  color: red;
+}
+.btn {
+  /*nút - và nút +*/
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.sub_btn {
+  /*nút "thêm vào giỏ hàng" và nút "mua ngay" */
+  height: 40px;
+  border: none;
+  display: flex;
+}
+.sub_btn .them {
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.sub_btn .them:hover {
+  background-color: darkorange;
+}
+.sub_btn .mua {
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.sub_btn .mua:hover {
+  background-color: darkblue;
+}
+.right-item {
+  /*khối bên phải chứa tt chi tiết hơn của sách */
+  width: 500px;
+  min-width: 100px;
+  margin-left: 10px;
+  border: 2px dashed violet;
+}
+.right-header {
+  /*tiêu đề của khối bên phải*/
+  background-color: cornflowerblue;
+  padding: 4px;
+  border-bottom: 2px solid #ccc;
+  color: white;
+  text-align: center;
+}
+.right-item h3 {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 2.5px;
+  text-align: justify;
+}
+
+/*section mô tả sản phẩm */
+.bottom {
+  display: flex;
+}
+.describe {
+  width: 1100px;
+  margin-left: 20px;
+  padding: 10px;
+}
+.describe h2 {
+  font-size: 25px;
+  padding-bottom: 5px;
+  color: red;
+  font-weight: bolder;
+  border-bottom: 1px solid black;
+}
+.describe p {
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: justify;
+}
+.introduction {
+  flex: 1;
+  margin: 20px;
+  border: 2.5px dotted cornflowerblue;
+  font-style: italic;
+  padding: 20px;
+}
+/*section các sản phẩm liên quan */
+.relative-product {
+  padding: 30px;
+  color: red;
+}
+.book-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.book-card img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.book-card h3 {
+  color: black;
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.book-card p {
+  color: red;
+  font-weight: bold;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/*phần footer*/
+footer {
+  background-color: rgb(248, 247, 226);
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-lienhe {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
+}
+
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
+}

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Images/LogoFahasi.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/CSS/giohang.css" />
+  </head>
+
+  <body>
+    <header class="header fixed">
+      <div class="container">
+        <div class="logo">
+          <a href="/trangchu.html"
+            ><img src="/Images/LogoFahasi.png" alt="Logo fahasi"
+          /></a>
+        </div>
+        <nav class="nav">
+          <a href="">TRANG CHỦ</a>
+          <a href="">GIỚI THIỆU</a>
+          <a href="">SẢN PHẨM</a>
+          <a href="">ĐĂNG NHẬP</a>
+          <a href="">ĐĂNG KÍ</a>
+        </nav>
+        <div class="gio_hang">
+          <img src="/Images/icon-class-gio-hang.png" alt="" />
+          <img src="/Images/icon-class-gio-hang2.png" alt="" />
+        </div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="tên sách" />
+        <input type="submit" value="Tìm kiếm" />
+      </div>
+    </header>
+
+    <main>
+      <section class="page-layout">
+        <div class="left">
+          <h3>Hỗ trợ:</h3>
+          <p>🚚 Giao hàng nhanh</p>
+          <p>🔁 Đổi trả 7 ngày</p>
+          <p>💳 COD toàn quốc</p>
+          <hr />
+          <h3>Cam kết:</h3>
+          <p>⭐ Sách chính hãng</p>
+          <p>🔒 Thanh toán an toàn</p>
+          <p>🎁 Ưu đãi mỗi tuần</p>
+        </div>
+        <div class="center">
+          <div class="center top">
+            <h2 class="title">Giỏ hàng của bạn</h2>
+          </div>
+          <div class="center bot">
+            <!--
+          <div class="cart-empty">
+            <img src="images/empty-cart.png" alt="Giỏ hàng trống" />
+            <p>Giỏ hàng của bạn đang trống</p>
+            <a href="index.html" class="btn-back">Tiếp tục mua sắm</a>
+          </div>
+          -->
+            <div class="cart-header">
+              <h2 class="item-img">Sản phẩm</h2>
+              <h2 class="item-info">Thông tin</h2>
+              <h2 class="item-quantity">Số lượng</h2>
+              <h2 class="item-total">Giá</h2>
+            </div>
+            <div class="cart-item">
+              <!-- Khối 1: Ảnh -->
+              <div class="item-img">
+                <img src="/Images/anh_mau.jpg" alt="Sách" />
+              </div>
+
+              <!-- Khối 2: Thông tin sách -->
+              <div class="item-info">
+                <h3 class="book-name">Tên: Sách mẫu</h3>
+                <h3>Thể loại: Tiểu thuyết</h3>
+                <h3>Đơn giá: 50.000đ</h3>
+              </div>
+
+              <!-- Khối 3: Số lượng -->
+              <div class="item-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+
+              <!-- Khối 4: Thành tiền -->
+              <div class="item-total">50.000đ</div>
+
+              <!-- Khối 5: Xóa -->
+              <div class="item-remove">
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+            <div class="cart-item">
+              <!-- Khối 1: Ảnh -->
+              <div class="item-img">
+                <img src="/Images/anh_mau.jpg" alt="Sách" />
+              </div>
+
+              <!-- Khối 2: Thông tin sách -->
+              <div class="item-info">
+                <h3 class="book-name">Tên: Sách mẫu</h3>
+                <h3>Thể loại: Tiểu thuyết</h3>
+                <h3>Đơn giá: 50.000đ</h3>
+              </div>
+
+              <!-- Khối 3: Số lượng -->
+              <div class="item-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+
+              <!-- Khối 4: Thành tiền -->
+              <div class="item-total">50.000đ</div>
+
+              <!-- Khối 5: Xóa -->
+              <div class="item-remove">
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+            <div class="cart-item">
+              <!-- Khối 1: Ảnh -->
+              <div class="item-img">
+                <img src="/Images/anh_mau.jpg" alt="Sách" />
+              </div>
+
+              <!-- Khối 2: Thông tin sách -->
+              <div class="item-info">
+                <h3 class="book-name">Tên: Sách mẫu</h3>
+                <h3>Thể loại: Tiểu thuyết</h3>
+                <h3>Đơn giá: 50.000đ</h3>
+              </div>
+
+              <!-- Khối 3: Số lượng -->
+              <div class="item-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+
+              <!-- Khối 4: Thành tiền -->
+              <div class="item-total">50.000đ</div>
+
+              <!-- Khối 5: Xóa -->
+              <div class="item-remove">
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+            <div class="cart-item">
+              <!-- Khối 1: Ảnh -->
+              <div class="item-img">
+                <img src="/Images/anh_mau.jpg" alt="Sách" />
+              </div>
+
+              <!-- Khối 2: Thông tin sách -->
+              <div class="item-info">
+                <h3 class="book-name">Tên: Sách mẫu</h3>
+                <h3>Thể loại: Tiểu thuyết</h3>
+                <h3>Đơn giá: 50.000đ</h3>
+              </div>
+
+              <!-- Khối 3: Số lượng -->
+              <div class="item-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+
+              <!-- Khối 4: Thành tiền -->
+              <div class="item-total">50.000đ</div>
+
+              <!-- Khối 5: Xóa -->
+              <div class="item-remove">
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+
+            <h2 class="h2tt">Thông tin thanh toán:</h2>
+            <div class="info">
+    
+              <h3><strong>Chi phí vận chuyển:</strong></h3>
+              <h3><strong>Địa chỉ:</strong></h3>
+              <h3><strong>SĐT của khách hàng:</strong></h3>
+              <h3><strong>Tổng tiền:</strong></h3>
+            </div>
+            <div class="order_btn">
+              <button class="btn">Đặt hàng</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- Sách nổi bật -->
+      <section class="featured-books">
+        <h2>Sách nổi bật</h2>
+
+        <div class="book-list">
+          <a href="sanpham.html" class="book-card">
+            <img src="/Images/anh_mau.jpg" alt="Sách 1" />
+            <h3>Đắc Nhân Tâm</h3>
+            <p>45.000đ</p>
+          </a>
+
+          <a href="sanpham.html" class="book-card">
+            <img src="/Images/anh_mau.jpg" alt="Sách 2" />
+            <h3>Nhà Giả Kim</h3>
+            <p>60.000đ</p>
+          </a>
+
+          <a href="sanpham.html" class="book-card">
+            <img src="/Images/anh_mau.jpg" alt="Sách 3" />
+            <h3>Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
+            <p>55.000đ</p>
+          </a>
+
+          <a href="sanpham.html" class="book-card">
+            <img src="/Images/anh_mau.jpg" alt="Sách 4" />
+            <h3>Muôn Kiếp Nhân Sinh</h3>
+            <p>70.000đ</p>
+          </a>
+        </div>
+
+        <div class="view-more">
+          <a href="sanpham.html">Xem tất cả sản phẩm →</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-lienhe">
+          <div>
+            <img
+              src="/Images/icon/telephone.png"
+              alt="Biểu tượng điện thoại liên hệ"
+            />
+            <p>0703 546 770</p>
+          </div>
+          <div>
+            <img src="/Images/icon/location.png" alt="Biểu tượng địa điểm" />
+            <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
+          </div>
+          <div>
+            <img src="/Images/icon/email.png" alt="Biểu tượng email" />
+            <p>fahasistore@gmail.com</p>
+          </div>
+          <div>
+            <img src="/Images/icon/time.png" alt="Biểu tượng giờ làm việc" />
+            <p>07:00 - 22:00 (Hàng ngày)</p>
+          </div>
+        </div>
+        <div class="contact">
+          <p>© 2026 Fahasi Store. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><img src="/Images/icon/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="/Images/icon/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#" aria-label="TikTok"
+              ><img src="/Images/icon/tiktok.png" alt="TikTok"
+            /></a>
+            <a href="#" aria-label="Messenger"
+              ><img src="/Images/icon/messenger.png" alt="Messenger"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
