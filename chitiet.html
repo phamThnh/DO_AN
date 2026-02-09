@@ -54,7 +54,9 @@
         <div class="left-item">
           <div class="item-image">
             <button class="slider-btn" onclick="slideLeft()">&#10094;</button>
-            <img src="Images/anh_mau.jpg" alt="Sản phẩm" />
+            <div class="image-wrap">
+              <img src="Images/anh_mau.jpg" />
+            </div>
             <button class="slider-btn" onclick="slideRight()">&#10095;</button>
           </div>
           <div class="slider-wrapper">
@@ -77,9 +79,11 @@
             </h2>
             <h2>Mã sách: 82181692</h2>
             <h2>Tình trạng: còn</h2>
-            <button class="btn">-</button>
-            <span>1</span>
-            <button class="btn">+</button>
+            <div class="quantity">
+              <button class="btn">-</button>
+              <span>1</span>
+              <button class="btn">+</button>
+            </div>
             <h2>200,000 VNĐ</h2>
           </div>
           <div class="sub_btn">
@@ -209,7 +213,7 @@
         </div>
         <div class="contact">
           <p>© 2026 Fahasi Store. All rights reserved.</p>
-          <div class="social-icons">
+          <div>
             <a href="#" aria-label="Facebook"
               ><img src="/Images/icon/facebook.png" alt="Facebook"
             /></a>

@@ -57,12 +57,12 @@ header {
 }
 
 .search-box input[type="text"] {
-  width: 700px;
+  width: 70%;
   border-right: none;
 }
 
 .search-box input[type="submit"] {
-  width: 100px;
+  width: 10%;
   cursor: pointer;
   background-color: rgb(112, 209, 209);
   color: white;
@@ -92,7 +92,8 @@ header {
 .item {
   /*khối chứa chi tiết quyển sách đang xem*/
 
-  max-width: 1400px;
+  max-width: 1500px;
+  max-height: 1500px;
   margin: 100px auto; /* CĂN GIỮA */
   padding: 0 20px;
   display: flex;
@@ -100,6 +101,7 @@ header {
 .left-item {
   /*khối bên trái chứa ảnh con và ảnh lớn*/
   display: flex;
+  width: 33%;
   flex-direction: column;
   background-color: #ebeeed;
   border-radius: 20px;
@@ -109,15 +111,22 @@ header {
   /*điều chỉnh khối chứa 2 button < , > và ảnh lớn */
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
   gap: 15px;
 }
 
-.item-image img {
-  /*điều chỉnh kích thước của ảnh lớn */
-  width: 300px;
-  height: 390px;
-  object-fit: cover;
-  border: 1px solid #ccc;
+.image-wrap {
+  max-width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrap img {
+  max-width: 100%;
+  height: auto;
 }
 
 .slider-wrapper {
@@ -130,9 +139,11 @@ header {
 
 .slider-container {
   /*xác định độ rộng của khối chứa ảnh nhỏ */
-  width: 300px; /* khung hiển thị */
+  width: 100%;
+  max-width: 300px; /* khung hiển thị */
   overflow-x: scroll; /* ẨN ảnh thừa */
   align-items: center;
+  border: 1px solid black;
 }
 
 .slider-track {
@@ -143,16 +154,17 @@ header {
 
 .slider-track img {
   /*điều chỉnh kích thước của ảnh nhỏ*/
-  width: 100px;
-  height: 120px;
+  width: 30%;
+  height: auto;
   object-fit: cover;
-  margin-right: 10px;
+  padding: 2%;
+  cursor: pointer;
 }
 
 /* Nút < > */
 .slider-btn {
-  width: 44px;
-  height: 44px;
+  width: 10%;
+  height: 10%;
 
   display: flex;
   align-items: center;
@@ -172,18 +184,16 @@ header {
   background: rgba(0, 0, 0, 0.85);
 }
 .center-item {
-  /*khối giữa chứa các thông tin khi mua sách */
-  width: 500px;
-  min-width: 100px;
+  flex: 1;                         
   display: flex;
   flex-direction: column;
-
-  border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   margin-left: 20px;
 }
+
 .info {
   /* khối để xác định kiểu chữ, phông chữ của tt khi mua sách*/
+  width: 100%;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
 }
@@ -200,49 +210,59 @@ header {
   color: red;
 }
 .btn {
-  /*nút - và nút +*/
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+  /*nút + - */
+  width: 9%;
+  height: 12%;
+  font-size: 18px;
 }
-.sub_btn {
-  /*nút "thêm vào giỏ hàng" và nút "mua ngay" */
-  height: 40px;
-  border: none;
+.quantity {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.sub_btn .them {
-  width: 250px;
+
+.sub_btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.sub_btn button {
+  width: 49%;
+  height: 45px;
+  font-size: 16px;
+}
+.them{
   align-items: center;
   justify-content: center;
   background-color: orange;
   color: white;
-  font-size: 16px;
   cursor: pointer;
+  border: none;
 }
 .sub_btn .them:hover {
   background-color: darkorange;
 }
-.sub_btn .mua {
-  width: 250px;
+
+.mua {
   align-items: center;
   justify-content: center;
   background-color: blue;
   color: white;
-  font-size: 16px;
-  margin-left: 5px;
   cursor: pointer;
+  border: none;
 }
 .sub_btn .mua:hover {
   background-color: darkblue;
 }
 .right-item {
-  /*khối bên phải chứa tt chi tiết hơn của sách */
-  width: 500px;
-  min-width: 100px;
-  margin-left: 10px;
+  width: 33%;                   
+  padding: auto;
   border: 2px dashed violet;
+  border-radius: 12px;
+  overflow: hidden;         
 }
+
 .right-header {
   /*tiêu đề của khối bên phải*/
   background-color: cornflowerblue;
@@ -265,7 +285,7 @@ header {
   display: flex;
 }
 .describe {
-  width: 1100px;
+  width: 74%;
   margin-left: 20px;
   padding: 10px;
 }
@@ -301,7 +321,7 @@ header {
 }
 
 .book-card {
-  width: 200px;
+  width: 15%;
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
@@ -311,8 +331,8 @@ header {
 }
 
 .book-card img {
-  width: 120px;
-  height: 170px;
+  width: 60%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -347,10 +367,7 @@ footer {
   justify-content: space-between;
   display: flex;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: auto;
   gap: 15px;
 }
 
