@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header.fixed {
+  position: sticky;
+  top: -16px;
+}
+
+.logo img {
+  height: 70px;
+}
+header {
+  z-index: 100;
+}
+.container {
+  background-color: rgb(248, 247, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  text-decoration: none;
+  padding: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.gio_hang {
+  padding: 24px;
+}
+.gio_hang img {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* Phan main */
+.main {
+  height: 600px;
+  background-image: url(/images/Background_\ Library.jpg);
+
+  background-size: cover;
+  position: relative;
+  inset: 0;
+  backdrop-filter: blur(6px);
+}
+.about {
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  padding-left: 20px;
+}
+.about h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 50px;
+}
+.about h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+/* san pham */
+.sanpham-list {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sanpham {
+  width: 300px;
+  line-height: 25px;
+  margin: 10px;
+}
+.imgsanpham {
+  text-align: center;
+  padding: 20px;
+}
+.sanpham img {
+  height: 220px;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  padding-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.sanpham h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+.sanpham strong {
+  text-decoration: line-through;
+}
+.sanpham .sale {
+  padding: 5px;
+  background-color: red;
+  border-radius: 8px;
+}
+
+.sanpham .add_shopping {
+  width: 90%;
+  padding: 14px;
+  font-size: 18px;
+  color: rgb(188, 32, 32);
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(240, 8, 8);
+  border-width: 3px;
+  margin-left: 12px;
+  margin-top: 20px;
+}
+.sanpham .add_shopping:hover {
+  background-color: rgb(173, 25, 25);
+  color: white;
+  font-weight: 300;
+}
+.sanpham:hover {
+  /* border-style: solid; */
+  transform: scale(1.03);
+  background-color: aliceblue;
+  transition: 0.5s ease;
+}
+footer {
+  background-color: antiquewhite;
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-lienhe {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
+}
+
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
+}
+/* reponsive */
+@media screen and (max-width: 1024px) {
+  .sanpham-list {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  .main {
+    height: 400px;
+  }
+
+  .about h1 {
+    font-size: 30px;
+  }
+
+  .about h2,
+  .about h3 {
+    font-size: 16px;
+  }
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sanpham {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .sanpham img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .sanpham .add_shopping {
+    width: 95%;
+    margin: 10px auto;
+    display: block;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    align-items: center;
+    padding: 10px 15px;
+  }
+  .gio_hang {
+    padding: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  .nav-mobile-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+}
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+
+    order: 0;
+    margin-right: auto;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-input:checked ~ .nav {
+    display: flex;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

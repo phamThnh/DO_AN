@@ -1,0 +1,213 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #ff6b6b;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ===== BẢNG GIỎ HÀNG ===== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-table th {
+    background: #fafafa;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.product img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+/* ===== NÚT XOÁ ===== */
+.delete-btn {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #e60000;
+}
+
+/* ===== TỔNG TIỀN ===== */
+.checkout-box {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.checkout-box h2 {
+    margin-bottom: 10px;
+}
+
+/* ===== NÚT THANH TOÁN ===== */
+.checkout-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background: #ff4d4d;
+}
+
+/* ===== FORM KHÁCH HÀNG ===== */
+.customer-info {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.customer-info h2 {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 40px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.footer-lienhe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-lienhe div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center; /* cho đẹp, căn giữa */
+}
+
+.footer-lienhe img {
+  width: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 22px;
+  margin-left: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}

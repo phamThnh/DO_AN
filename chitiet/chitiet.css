@@ -117,17 +117,22 @@ header {
   gap: 15px;
 }
 
-.image-wrap {
-  max-width: 100%;
-  flex: 1;
+.main-image {
+  width: 100%;
+  max-width: 320px;     /* giới hạn tối đa */
+  aspect-ratio: 3 / 4; /* TỈ LỆ CỐ ĐỊNH */
   display: flex;
+  align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.image-wrap img {
-  max-width: 100%;
+.main-image img {
+  width: 100%;
   height: auto;
+  object-fit: contain;
 }
+
 
 .slider-wrapper {
   /*khối xác định lề của các ảnh con*/

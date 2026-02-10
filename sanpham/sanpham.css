@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header.fixed {
+  position: sticky;
+  top: -16px;
+}
+
+.logo img {
+  height: 70px;
+}
+.gio_hang {
+  padding: 24px;
+}
+.gio_hang img {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
+}
+header {
+  z-index: 100;
+}
+.container {
+  background-color: rgb(248, 247, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  text-decoration: none;
+  padding: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.sanpham-list {
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.sanpham {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sanpham:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Hinh anh */
+.imgsanpham {
+  background: #f6f6f6;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sanpham img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sanpham:hover img {
+  transform: scale(1.08);
+}
+
+/* Thong tin sach */
+.about-book {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.about-book h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.about-book p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Gia */
+.about-book strong {
+  color: #999;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.about-book .sale {
+  background: linear-gradient(45deg, #ff3d3d, #ff0000);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.about-book p:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d0021b;
+}
+
+/* Nut them gio */
+.add_shopping {
+  margin: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.add_shopping:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+footer {
+  background-color: rgb(248, 247, 226);
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-lienhe {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
+}
+
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
+}

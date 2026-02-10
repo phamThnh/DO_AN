@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn hàng | Book Store</title>
+    <link rel="stylesheet" href="donhang.css">
+</head>
+
+<body>
+
+<!-- Thanh điều hướng -->
+
+<nav class="navbar">
+    <ul>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="sanpham.html">Sản phẩm</a></li>
+        <li><a href="giohang.html" class="active">Giỏ hàng</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>🛒 Giỏ hàng của bạn</h1>
+
+```
+<!-- Bảng sản phẩm -->
+<table class="cart-table">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Tạm tính</th>
+            <th>Xóa</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="product">
+                <img src="images/nhagiakim.jpg" alt="">
+                <span>Nhà giả kim</span>
+            </td>
+            <td>79.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+
+        <tr>
+            <td class="product">
+                <img src="images/matbiec.jpg" alt="">
+                <span>Mắt biếc</span>
+            </td>
+            <td>95.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+
+        <tr>
+            <td class="product">
+                <img src="images/dacnhantam.jpg" alt="">
+                <span>Đắc nhân tâm</span>
+            </td>
+            <td>88.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+
+        <tr>
+            <td class="product">
+                <img src="images/bogia.jpg" alt="">
+                <span>Bố già</span>
+            </td>
+            <td>150.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+
+        <tr>
+            <td class="product">
+                <img src="images/harrypotter.jpg" alt="">
+                <span>Combo Harry Potter (7 cuốn)</span>
+            </td>
+            <td>799.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+
+        <tr>
+            <td class="product">
+                <img src="images/sherlock.jpg" alt="">
+                <span>Boxset Sherlock Holmes</span>
+            </td>
+            <td>650.000đ</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>—</td>
+            <td><button class="delete-btn">X</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Tổng tiền -->
+<div class="checkout-box">
+    <h2>Tổng cộng: <span>Người mua tự tính</span></h2>
+    <button class="checkout-btn">Tiến hành thanh toán</button>
+</div>
+
+<!-- Thông tin khách hàng -->
+<section class="customer-info">
+    <h2>📦 Thông tin khách hàng</h2>
+
+    <form>
+        <div class="form-group">
+            <label>Họ và tên</label>
+            <input type="text" placeholder="Nhập họ tên" required>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="tel" placeholder="Nhập số điện thoại" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Nhập email">
+        </div>
+
+        <div class="form-group">
+            <label>Địa chỉ nhận hàng</label>
+            <input type="text" placeholder="Số nhà, tên đường..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Ghi chú</label>
+            <textarea placeholder="Ví dụ: giao giờ hành chính"></textarea>
+        </div>
+
+        <button type="submit" class="checkout-btn">Xác nhận đặt hàng</button>
+    </form>
+</section>
+```
+
+</div>
+
+<footer>
+    <p>© 2026 Book Store</p>
+  <div class="footer-container">
+    <div class="footer-lienhe">
+      <div>
+        <img src="/Images/icon/telephone.png" alt="Điện thoại" />
+        <p>0703 546 770</p>
+      </div>
+      <div>
+        <img src="/Images/icon/location.png" alt="Địa điểm" />
+        <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
+      </div>
+      <div>
+        <img src="/Images/icon/email.png" alt="Email" />
+        <p>fahasistore@gmail.com</p>
+      </div>
+      <div>
+        <img src="/Images/icon/time.png" alt="Giờ làm việc" />
+        <p>07:00 - 22:00 (Hàng ngày)</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <p>© 2026 Fahasi Store. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="/Images/icon/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="/Images/icon/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="/Images/icon/tiktok.png" alt="TikTok" /></a>
+        <a href="#"><img src="/Images/icon/messenger.png" alt="Messenger" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

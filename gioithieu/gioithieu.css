@@ -1,0 +1,140 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #333;
+}
+/* ================= HEADER ================= */
+.header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 0;
+}
+
+.header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px;
+}
+
+/* MENU */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ff6b6b;
+}
+
+.nav a.active {
+  color: #ff6b6b;
+}
+
+/* ================= MAIN ================= */
+.page {
+  width: 90%;
+  max-width: 900px;
+  margin: 120px auto 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff6b6b;
+}
+
+.page section {
+  margin-bottom: 25px;
+}
+
+.page h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.page p {
+  line-height: 1.6;
+}
+
+.page ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 40px;
+  background: #222;
+  color: white;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+/* liên hệ */
+.footer-lienhe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-lienhe div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-lienhe img {
+  width: 20px;
+}
+
+/* copyright + mạng xã hội */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 22px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
