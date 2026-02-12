@@ -4,118 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
-  <link rel="shortcut icon" href="/images/LogoFahasi.png" type="image/x-icon"/>
-  <link rel="stylesheet" href="/gioithieu/gioithieu.css" />
-  <title>Giới thiệu</title>
+  <link rel="shortcut icon" href="/images/LogoFahasi.png" type="image/x-icon" />
+  <link rel="stylesheet" href="gioithieu.css" />
+
+  <title>Giới Thiệu</title>
 </head>
 
 <body>
-  <header class="header fixed">
-    <div class="container">
-      <div class="logo">
-        <a href="/trangchu.html">
-          <img src="/images/LogoFahasi.png" alt="Logo" />
-        </a>
-      </div>
 
-      <nav class="nav">
-        <a href="/trangchu.html">TRANG CHỦ</a>
-        <a href="#" class="active">GIỚI THIỆU</a>
-        <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
-        <a href="/login/login.html">ĐĂNG NHẬP</a>
-        <a href="">ĐĂNG KÍ</a>
-      </nav>
+<!-- ================= HEADER ================= -->
+<header class="header fixed">
+  <div class="container">
+    <div class="logo">
+      <a href="/trangchu.html">
+        <img src="/images/LogoFahasi.png" alt="Logo fahasi"/>
+      </a>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main class="page">
-    <h1>Giới thiệu về Fahasi Store</h1>
+    <nav class="nav">
+      <a href="/trangchu.html">TRANG CHỦ</a>
+      <a href="/gioithieu/gioithieu.html" class="active">GIỚI THIỆU</a>
+      <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
+      <a href="/login/login.html">ĐĂNG NHẬP</a>
+    </nav>
 
-    <section>
-      <h2>Chúng tôi là ai?</h2>
+    <div class="gio_hang">
+      <img src="/images/icon-class-gio-hang.png" alt="">
+      <img src="/images/icon-class-gio-hang2.png" alt="">
+    </div>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="about-page">
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>Về Fahasi Store</h1>
+      <p>Lan tỏa tri thức – Kết nối đam mê đọc sách</p>
+    </div>
+  </section>
+
+  <!-- CÂU CHUYỆN -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Câu chuyện của chúng tôi</h2>
+        <p>
+          Fahasi Store được thành lập năm 2026 với mong muốn xây dựng một
+          không gian mua sắm sách hiện đại, truyền cảm hứng và thân thiện
+          cho cộng đồng yêu đọc sách tại Cần Thơ.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/images/GioiThieu-Images/about-story.jpg" alt="Cửa hàng sách">
+      </div>
+    </div>
+  </section>
+
+  <!-- SỨ MỆNH -->
+  <section class="about-section light">
+    <div class="about-container reverse">
+      <div class="about-text">
+        <h2>Sứ mệnh & Tầm nhìn</h2>
+        <p>
+          Chúng tôi mong muốn mang tri thức đến gần hơn với mọi người
+          thông qua nền tảng mua sắm tiện lợi và dịch vụ tận tâm.
+          Fahasi Store hướng tới trở thành thương hiệu sách uy tín
+          hàng đầu khu vực.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/images/GioiThieu-Images/about-mission.jpg" alt="Sứ mệnh">
+      </div>
+    </div>
+  </section>
+
+  <!-- GIÁ TRỊ -->
+  <section class="about-section">
+    <h2 class="center-title">Giá trị cốt lõi</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>📚 Tri thức</h3>
+        <p>Luôn đặt nội dung và chất lượng sách lên hàng đầu.</p>
+      </div>
+      <div class="value-card">
+        <h3>🤝 Uy tín</h3>
+        <p>Cam kết sản phẩm chính hãng và dịch vụ đáng tin cậy.</p>
+      </div>
+      <div class="value-card">
+        <h3>💡 Sáng tạo</h3>
+        <p>Không ngừng cải tiến trải nghiệm người dùng.</p>
+      </div>
+      <div class="value-card">
+        <h3>❤️ Tận tâm</h3>
+        <p>Phục vụ khách hàng bằng sự chân thành và nhiệt huyết.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ĐỘI NGŨ -->
+  <section class="about-section light">
+    <h2 class="center-title">Đội ngũ phát triển</h2>
+    <div class="team-grid">
+      <div class="team-card">Nguyễn Phùng Nhựt Bình</div>
+      <div class="team-card">Phạm Nguyễn</div>
+      <div class="team-card">Phạm Võ Minh Thanh</div>
+      <div class="team-card">Đào Văn Khánh An</div>
+      <div class="team-card">Diệp Lê Chấn Bảo</div>
+    </div>
+  </section>
+  <!-- LIÊN HỆ & HỢP TÁC -->
+<section class="about-section contact-section">
+  <div class="contact-wrapper">
+    
+    <div class="contact-text">
+      <h2>Hợp tác cùng Fahasi Store</h2>
       <p>
-        Fahasi Store là cửa hàng sách dành cho cộng đồng yêu đọc sách tại Cần Thơ. Chúng tôi 
-        cung cấp nhiều thể loại sách đa dạng như văn học, kỹ năng, kinh tế, truyện thiếu nhi 
-        cùng các sản phẩm văn phòng phẩm chất lượng. 
+        Fahasi Store luôn sẵn sàng hợp tác với các nhà xuất bản,
+        đối tác kinh doanh và cộng đồng yêu sách để lan tỏa
+        giá trị tri thức rộng rãi hơn.
       </p>
-    </section>
-
-    <section>
-      <h2>Sứ mệnh</h2>
       <p>
-        Mang tri thức đến gần hơn với mọi người, giúp việc mua sách trở nên
-        nhanh chóng, tiện lợi và hiện đại.
+        Nếu bạn quan tâm đến việc hợp tác hoặc có bất kỳ câu hỏi nào,
+        hãy liên hệ với chúng tôi ngay hôm nay.
       </p>
-    </section>
+      <a href="mailto:fahasistore@gmail.com" class="contact-btn">
+        Liên hệ ngay
+      </a>
+    </div>
 
-    <section>
-      <h2>Thành viên phát triển</h2>
-      <ul>
-        <li>Nguyễn Phùng Nhựt Bình</li>
-        <li>Phạm Nguyễn</li>
-        <li>Phạm Võ Minh Thanh</li>
-        <li>Đào Văn Khánh An</li>
-        <li>Diệp Lê Chấn Bảo</li>
-      </ul>
-    </section>
-  </main>
+    <div class="contact-image">
+      <img src="/images/GioiThieu-Images/contact.jpg" alt="Liên hệ hợp tác">
+    </div>
 
-  <!-- FOOTER  -->
-  <footer>
-    <p>© 2026 Fahasi Store. All rights reserved.</p>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-lienhe">
-          <div>
-            <img
-              src="/Images/icon/telephone.png"
-              alt="Biểu tượng điện thoại liên hệ"
-            />
-            <p>0703 546 770</p>
-          </div>
-          <div>
-            <img src="/Images/icon/location.png" alt="Biểu tượng địa điểm" />
-            <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
-          </div>
-          <div>
-            <img src="/Images/icon/email.png" alt="Biểu tượng email" />
-            <p>fahasistore@gmail.com</p>
-          </div>
-          <div>
-            <img src="/Images/icon/time.png" alt="Biểu tượng giờ làm việc" />
-            <p>07:00 - 22:00 (Hàng ngày)</p>
-          </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-lienhe">
+        <div>
+          <img
+            src="/images/icon/telephone.png"
+            alt="Biểu tượng điện thoại liên hệ"
+          />
+          <p>0703 546 770</p>
         </div>
-        <div class="contact">
-          <p>© 2026 Fahasi Store. All rights reserved.</p>
-          <div class="social-icons">
-            <a href="#" aria-label="Facebook"
-              ><img src="/Images/icon/facebook.png" alt="Facebook"
-            /></a>
-            <a href="#" aria-label="Instagram"
-              ><img src="/Images/icon/instagram.png" alt="Instagram"
-            /></a>
-            <a href="#" aria-label="TikTok"
-              ><img src="/Images/icon/tiktok.png" alt="TikTok"
-            /></a>
-            <a href="#" aria-label="Messenger"
-              ><img src="/Images/icon/messenger.png" alt="Messenger"
-            /></a>
-          </div>
+        <div>
+          <img src="/images/icon/location.png" alt="Biểu tượng địa điểm" />
+          <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
+        </div>
+        <div>
+          <img src="/images/icon/email.png" alt="Biểu tượng email" />
+          <p>fahasistore@gmail.com</p>
+        </div>
+        <div>
+          <img src="/images/icon/time.png" alt="Biểu tượng giờ làm việc" />
+          <p>07:00 - 22:00 (Hàng ngày)</p>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="contact">
+        <p>© 2026 Fahasi Store. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><img src="/images/icon/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#" aria-label="Instagram"
+            ><img src="/images/icon/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#" aria-label="TikTok"
+            ><img src="/images/icon/tiktok.png" alt="TikTok"
+          /></a>
+          <a href="#" aria-label="Messenger"
+            ><img src="/images/icon/messenger.png" alt="Messenger"
+          /></a>
+        </div>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>

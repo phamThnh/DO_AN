@@ -1,140 +1,276 @@
-/* RESET */
+/* ================= HEADER ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
-  background: #f5f6fa;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-/* ================= HEADER ================= */
-.header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 15px 0;
-}
-
-.header .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header.fixed {
+  position: sticky;
+  top: -16px;
 }
 
 .logo img {
-  height: 55px;
+  height: 70px;
+}
+header {
+  z-index: 100;
+}
+.container {
+  background-color: rgb(248, 247, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  text-decoration: none;
+  padding: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.gio_hang {
+  padding: 24px;
+}
+.gio_hang img {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-/* MENU */
-.nav {
+
+
+
+/* ================= MAIN ================= */
+/* ===== ABOUT PAGE ===== */
+
+.about-page {
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.about-hero {
+  height: 400px;
+  background: url(/images/Background_\ Library.jpg) center/cover no-repeat;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-family: "Playfair Display", serif;
+}
+
+.about-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* SECTION */
+.about-section {
+  padding: 80px 10%;
+}
+
+.about-section.light {
+  background: #f8f7e2;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  color: #b22222;
+}
+
+.about-text p {
+  line-height: 1.8;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* VALUE GRID */
+.center-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  color: #b22222;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
+.value-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
-.nav a:hover {
-  color: #ff6b6b;
+.value-card:hover {
+  transform: translateY(-5px);
 }
 
-.nav a.active {
-  color: #ff6b6b;
+/* TEAM */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
 
-/* ================= MAIN ================= */
-.page {
-  width: 90%;
-  max-width: 900px;
-  margin: 120px auto 50px;
+.team-card {
   background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-.page h1 {
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  margin-bottom: 30px;
-  color: #ff6b6b;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
-.page section {
-  margin-bottom: 25px;
+.team-card:hover {
+  background: #b22222;
+  color: white;
 }
 
-.page h2 {
-  margin-bottom: 10px;
-  color: #444;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
 }
 
-.page p {
-  line-height: 1.6;
+/* CONTACT SECTION */
+.contact-section {
+  background: #ffffff;
 }
 
-.page ul {
-  padding-left: 20px;
-  line-height: 1.6;
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.contact-text h2 {
+  font-family: "Playfair Display", serif;
+  color: #b22222;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #b22222;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #8b1a1a;
+}
+
+.contact-image img {
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
 }
 
 /* ================= FOOTER ================= */
 footer {
-  margin-top: 40px;
-  background: #222;
-  color: white;
+  background-color: rgb(248, 247, 226);
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
 }
 
-.footer-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 0;
-}
-
-/* liên hệ */
 .footer-lienhe {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.footer-lienhe div {
+  justify-content: space-between;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
 }
 
 .footer-lienhe img {
-  width: 20px;
-}
-
-/* copyright + mạng xã hội */
-.contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.social-icons img {
-  width: 22px;
+  width: 30px;
   margin-left: 10px;
-  transition: 0.3s;
+  padding: 5px;
 }
 
-.social-icons img:hover {
-  transform: scale(1.2);
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
 }

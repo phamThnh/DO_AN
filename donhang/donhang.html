@@ -1,184 +1,117 @@
-<!DOCTYPE html>
-
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Đơn hàng | Book Store</title>
-    <link rel="stylesheet" href="donhang.css">
-</head>
-
-<body>
-
-<!-- Thanh điều hướng -->
-
-<nav class="navbar">
-    <ul>
-        <li><a href="trangchu.html">Trang chủ</a></li>
-        <li><a href="sanpham.html">Sản phẩm</a></li>
-        <li><a href="giohang.html" class="active">Giỏ hàng</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <h1>🛒 Giỏ hàng của bạn</h1>
-
-```
-<!-- Bảng sản phẩm -->
-<table class="cart-table">
-    <thead>
-        <tr>
-            <th>Sản phẩm</th>
-            <th>Giá</th>
-            <th>Số lượng</th>
-            <th>Tạm tính</th>
-            <th>Xóa</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-            <td class="product">
-                <img src="images/nhagiakim.jpg" alt="">
-                <span>Nhà giả kim</span>
-            </td>
-            <td>79.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-
-        <tr>
-            <td class="product">
-                <img src="images/matbiec.jpg" alt="">
-                <span>Mắt biếc</span>
-            </td>
-            <td>95.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-
-        <tr>
-            <td class="product">
-                <img src="images/dacnhantam.jpg" alt="">
-                <span>Đắc nhân tâm</span>
-            </td>
-            <td>88.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-
-        <tr>
-            <td class="product">
-                <img src="images/bogia.jpg" alt="">
-                <span>Bố già</span>
-            </td>
-            <td>150.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-
-        <tr>
-            <td class="product">
-                <img src="images/harrypotter.jpg" alt="">
-                <span>Combo Harry Potter (7 cuốn)</span>
-            </td>
-            <td>799.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-
-        <tr>
-            <td class="product">
-                <img src="images/sherlock.jpg" alt="">
-                <span>Boxset Sherlock Holmes</span>
-            </td>
-            <td>650.000đ</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>—</td>
-            <td><button class="delete-btn">X</button></td>
-        </tr>
-    </tbody>
-</table>
-
-<!-- Tổng tiền -->
-<div class="checkout-box">
-    <h2>Tổng cộng: <span>Người mua tự tính</span></h2>
-    <button class="checkout-btn">Tiến hành thanh toán</button>
-</div>
-
-<!-- Thông tin khách hàng -->
-<section class="customer-info">
-    <h2>📦 Thông tin khách hàng</h2>
-
-    <form>
-        <div class="form-group">
-            <label>Họ và tên</label>
-            <input type="text" placeholder="Nhập họ tên" required>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đơn Hàng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/images/LogoFahasi.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/donhang/donhang.css" />
+  </head>
+  <body>
+    <header class="header fixed">
+      <div class="container">
+        <div class="logo">
+          <a href="/trangchu.html"
+            ><img src="/images/LogoFahasi.png" alt="Logo fahasi"
+          /></a>
         </div>
-
-        <div class="form-group">
-            <label>Số điện thoại</label>
-            <input type="tel" placeholder="Nhập số điện thoại" required>
+        <nav class="nav">
+          <a href="/trangchu.html">TRANG CHỦ</a>
+          <a href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
+          <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
+          <a href="/login/login.html">ĐĂNG NHẬP</a>
+          <a href="">ĐĂNG KÍ</a>
+        </nav>
+        <div class="gio_hang">
+          <img src="/images/icon-class-gio-hang.png" alt="" />
+          <img src="/images/icon-class-gio-hang2.png" alt="" />
         </div>
+      </div>
+    </header>
+    <main>
+      <main class="donhang-section">
+        <h1 class="title">Đơn hàng của bạn</h1>
 
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="Nhập email">
+        <div class="table-wrapper">
+          <table class="order-table">
+            <thead>
+              <tr>
+                <th>Mã đơn</th>
+                <th>Ngày đặt</th>
+                <th>Tổng tiền</th>
+                <th>Thanh toán</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>#DH001</td>
+                <td>10/02/2026</td>
+                <td class="price">245.000đ</td>
+                <td>COD</td>
+                <td><span class="status delivering">Đang giao</span></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>#DH002</td>
+                <td>05/02/2026</td>
+                <td class="price">799.000đ</td>
+                <td>Chuyển khoản</td>
+                <td><span class="status done">Đã giao</span></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>#DH003</td>
+                <td>12/02/2026</td>
+                <td class="price">150.000đ</td>
+                <td>COD</td>
+                <td><span class="status waiting">Chờ xử lý</span></td>
+                <td>
+                  <button class="delete-btn">Hủy</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </main>
 
-        <div class="form-group">
-            <label>Địa chỉ nhận hàng</label>
-            <input type="text" placeholder="Số nhà, tên đường..." required>
+      <!-- FOOTER giữ nguyên trang chủ -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-lienhe">
+            <div>
+              <img src="/images/icon/telephone.png" alt="" />
+              <p>0703 546 770</p>
+            </div>
+            <div>
+              <img src="/images/icon/location.png" alt="" />
+              <p>Đường 3/2, Ninh Kiều, Cần Thơ</p>
+            </div>
+            <div>
+              <img src="/images/icon/email.png" alt="" />
+              <p>fahasistore@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <p>© 2026 Fahasi Store</p>
+          </div>
         </div>
-
-        <div class="form-group">
-            <label>Ghi chú</label>
-            <textarea placeholder="Ví dụ: giao giờ hành chính"></textarea>
-        </div>
-
-        <button type="submit" class="checkout-btn">Xác nhận đặt hàng</button>
-    </form>
-</section>
-```
-
-</div>
-
-<footer>
-    <p>© 2026 Book Store</p>
-  <div class="footer-container">
-    <div class="footer-lienhe">
-      <div>
-        <img src="/Images/icon/telephone.png" alt="Điện thoại" />
-        <p>0703 546 770</p>
-      </div>
-      <div>
-        <img src="/Images/icon/location.png" alt="Địa điểm" />
-        <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
-      </div>
-      <div>
-        <img src="/Images/icon/email.png" alt="Email" />
-        <p>fahasistore@gmail.com</p>
-      </div>
-      <div>
-        <img src="/Images/icon/time.png" alt="Giờ làm việc" />
-        <p>07:00 - 22:00 (Hàng ngày)</p>
-      </div>
-    </div>
-
-    <div class="contact">
-      <p>© 2026 Fahasi Store. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#"><img src="/Images/icon/facebook.png" alt="Facebook" /></a>
-        <a href="#"><img src="/Images/icon/instagram.png" alt="Instagram" /></a>
-        <a href="#"><img src="/Images/icon/tiktok.png" alt="TikTok" /></a>
-        <a href="#"><img src="/Images/icon/messenger.png" alt="Messenger" /></a>
-      </div>
-    </div>
-  </div>
-</footer>
-</body>
+      </footer>
+    </main>
+  </body>
 </html>
