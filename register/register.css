@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #3378ff;
+  text-decoration: none;
+  background-color: transparent;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-card {
+  width: 400px;
+  padding: 35px;
+  background: rgba(248, 247, 226, 0.85);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.auth-brand .logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 20px;
+  opacity: 0.7;
+}
+.auth-title {
+  font-size: 24px;
+  margin: 20px 0 20px;
+}
+.form-group .form-label {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  color: rgb(136, 136, 134);
+  margin: 6px;
+  margin-left: 0;
+}
+.form-group .form-input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0 20px;
+}
+.form-checkbox .checkbox {
+  width: 5%;
+  cursor: pointer;
+}
+.btnregister {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #3b6fe6;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0 15px;
+}
+.auth-witch {
+  font-size: 14px;
+}
