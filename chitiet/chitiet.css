@@ -90,23 +90,25 @@ header {
 
 /*section chi tiết của 1 quyển sách*/
 .item {
-  /*khối chứa chi tiết quyển sách đang xem*/
-
   max-width: 1500px;
-  max-height: 1500px;
-  margin: 100px auto; /* CĂN GIỮA */
+  margin: 100px auto;
   padding: 0 20px;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 20px;
 }
 .left-item {
-  /*khối bên trái chứa ảnh con và ảnh lớn*/
   display: flex;
-  width: 33%;
   flex-direction: column;
+
+  width: auto;
+
   background-color: #ebeeed;
   border-radius: 20px;
   padding: 10px;
 }
+
 .item-image {
   /*điều chỉnh khối chứa 2 button < , > và ảnh lớn */
   display: flex;
@@ -119,7 +121,7 @@ header {
 
 .main-image {
   width: 100%;
-  max-width: 320px;     /* giới hạn tối đa */
+  max-width: 320px; /* giới hạn tối đa */
   aspect-ratio: 3 / 4; /* TỈ LỆ CỐ ĐỊNH */
   display: flex;
   align-items: center;
@@ -132,7 +134,6 @@ header {
   height: auto;
   object-fit: contain;
 }
-
 
 .slider-wrapper {
   /*khối xác định lề của các ảnh con*/
@@ -189,11 +190,9 @@ header {
   background: rgba(0, 0, 0, 0.85);
 }
 .center-item {
-  flex: 1;                         
   display: flex;
   flex-direction: column;
   padding: 15px;
-  margin-left: 20px;
 }
 
 .info {
@@ -237,7 +236,7 @@ header {
   height: 45px;
   font-size: 16px;
 }
-.them{
+.them {
   align-items: center;
   justify-content: center;
   background-color: orange;
@@ -261,11 +260,11 @@ header {
   background-color: darkblue;
 }
 .right-item {
-  width: 33%;                   
-  padding: auto;
+  width: auto;
+  padding: 10px;
   border: 2px dashed violet;
   border-radius: 12px;
-  overflow: hidden;         
+  overflow: hidden;
 }
 
 .right-header {
@@ -319,26 +318,34 @@ header {
   color: red;
 }
 .book-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
+
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .book-card {
-  width: 15%;
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
   text-decoration: none;
+
   background: #fff;
   transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .book-card img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
+  width: 100%;
+  max-width: 140px;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
 }
 
 .book-card h3 {
@@ -398,4 +405,52 @@ footer {
 .contact {
   text-align: center;
   padding-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .nav a {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .search-box input[type="text"] {
+    width: 70%;
+  }
+
+  .search-box input[type="submit"] {
+    width: 30%;
+  }
+
+  .slider-container {
+    max-width: 100%;
+  }
+
+  .book-card {
+    width: 45%;
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .book-card {
+    width: 100%;
+  }
+
+  .main-image {
+    max-width: 240px;
+  }
+
+  .info span {
+    font-size: 18px;
+  }
+
+  .sub_btn {
+    flex-direction: column;
+  }
+
+  .sub_btn button {
+    width: 100%;
+  }
 }
