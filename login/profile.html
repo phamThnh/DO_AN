@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/images/LogoFahasi.png"
+      type="image/x-icon"
+    />
+    <title>Thông tin người dùng</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f5f5;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .header.fixed {
+        position: sticky;
+        top: -16px;
+      }
+
+      .logo img {
+        height: 70px;
+      }
+      header {
+        z-index: 100;
+      }
+      .container {
+        background-color: rgb(248, 247, 226);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .nav a {
+        text-decoration: none;
+        padding: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+      }
+      .nav a:hover {
+        text-shadow: 1px 0;
+        transition: 0.5s ease;
+      }
+      .gio_hang {
+        padding: 24px;
+      }
+      .gio_hang img {
+        width: 48px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .profile-container {
+        width: 55%;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .profile-title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        color: #b22222;
+      }
+      .profile-image {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 2em;
+      }
+      .profile-image img {
+        width: 25%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        border: 4px solid #000000;
+      }
+
+      .info-group {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .info-label {
+        font-weight: 500;
+        color: #666;
+        width: 40%;
+      }
+
+      .info-value {
+        width: 60%;
+        text-align: left;
+        color: #222;
+      }
+
+      .action-section {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .btn-primary {
+        background: #3b6fe6;
+        color: white;
+      }
+
+      .btn-warning {
+        background: #ff9800;
+        color: white;
+      }
+
+      .btn-secondary {
+        background: #777;
+        color: white;
+      }
+
+      .btn-danger {
+        background: #e53935;
+        color: white;
+      }
+
+      .btn:hover {
+        opacity: 0.75;
+      }
+      .btn-edit {
+        background: #4caf50;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .profile-container {
+          width: 95%;
+        }
+
+        .info-group {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .info-label,
+        .info-value {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header fixed">
+      <div class="container">
+        <div class="logo">
+          <a href="/trangchu.html"
+            ><img src="/images/LogoFahasi.png" alt="Logo fahasi"
+          /></a>
+        </div>
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
+
+        <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
+        <nav class="nav">
+          <a href="/trangchu.html">TRANG CHỦ</a>
+          <a href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
+          <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
+        </nav>
+        <div class="gio_hang">
+          <img src="/images/icon-class-gio-hang.png" alt="" />
+          <img src="/images/icon-class-gio-hang2.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="profile-container">
+        <div class="profile-title">Thông Tin Người Dùng</div>
+        <div class="profile-image">
+          <img src="/images/profile-image.png" alt="ảnh" />
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">Họ tên:</div>
+          <div class="info-value">Nguyễn Văn A</div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">Giới tính:</div>
+          <div class="info-value">Nam</div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">Ngày tháng năm sinh:</div>
+          <div class="info-value">01/01/2005</div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">SĐT:</div>
+          <div class="info-value">0123456789</div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">Email:</div>
+          <div class="info-value">example@gmail.com</div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">Địa chỉ:</div>
+          <div class="info-value">Cần Thơ, Việt Nam</div>
+        </div>
+        <div class="action-section">
+          <button class="btn btn-edit">Sửa thông tin</button>
+          <button class="btn btn-primary">Đổi mật khẩu</button>
+          <button class="btn btn-warning">Quên mật khẩu</button>
+          <button class="btn btn-secondary">Đăng xuất</button>
+          <button class="btn btn-danger">Xóa tài khoản</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
