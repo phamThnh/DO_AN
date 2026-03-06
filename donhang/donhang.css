@@ -139,25 +139,48 @@ header {
 /* FOOTER */
 footer {
   background-color: antiquewhite;
-  padding: 30px 0;
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
 }
 
-.footer-container {
-  display: flex;
+.footer-lienhe {
   justify-content: space-between;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer-lienhe div {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
 }
 
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
 .contact {
-  text-align: right;
+  text-align: center;
+  padding-bottom: 24px;
 }
 
 /* RESPONSIVE */

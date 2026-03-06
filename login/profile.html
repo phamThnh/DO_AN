@@ -67,7 +67,37 @@
         padding: 10px;
         cursor: pointer;
       }
+      .search-box {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        border: 1px solid blue;
+      }
 
+      .search-box input {
+        height: 50px;
+        font-size: 18px;
+
+        box-sizing: border-box;
+        transition: all 0.6s ease-out;
+      }
+
+      .search-box input[type="text"] {
+        width: 200px;
+      }
+
+      .search-box input[type="submit"] {
+        width: 100px;
+        cursor: pointer;
+      }
+      .search-box input[type="submit"]:hover {
+        background-color: red;
+      }
+      .nav-mobile-btn,
+      .nav-input {
+        display: none;
+      }
+      /*main*/
       .profile-container {
         width: 55%;
         background: white;
@@ -151,11 +181,6 @@
         color: white;
       }
 
-      .btn-danger {
-        background: #e53935;
-        color: white;
-      }
-
       .btn:hover {
         opacity: 0.75;
       }
@@ -163,7 +188,54 @@
         background: #4caf50;
         color: white;
       }
+      /*footer*/
+      footer {
+        background-color: antiquewhite;
+      }
+      .footer {
+        background: rgb(191, 216, 144);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+      }
 
+      .footer-lienhe {
+        justify-content: space-between;
+        display: flex;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        gap: 15px;
+      }
+
+      .footer-lienhe img {
+        width: 30px;
+        margin-left: 10px;
+        padding: 5px;
+      }
+
+      .popup-button {
+        position: fixed;
+        bottom: 130px;
+        right: 20px;
+      }
+
+      .popup-button img {
+        width: 50px;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 80%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      .contact {
+        text-align: center;
+        padding-bottom: 24px;
+      }
+
+      /*media*/
       @media (max-width: 768px) {
         .profile-container {
           width: 95%;
@@ -196,7 +268,13 @@
           <a href="/trangchu.html">TRANG CHỦ</a>
           <a href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
           <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
+          <a href="/login/login.html">ĐĂNG NHẬP</a>
+          <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
+        <div class="search-box">
+          <input type="text" placeholder="tên sách" />
+          <input type="submit" value="Tìm kiếm" />
+        </div>
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
             ><img src="/images/icon-class-gio-hang.png" alt=""
@@ -246,9 +324,50 @@
           <button class="btn btn-primary">Đổi mật khẩu</button>
           <button class="btn btn-warning">Quên mật khẩu</button>
           <button class="btn btn-secondary">Đăng xuất</button>
-          <button class="btn btn-danger">Xóa tài khoản</button>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-lienhe">
+          <div>
+            <img
+              src="/images/icon/telephone.png"
+              alt="Biểu tượng điện thoại liên hệ"
+            />
+            <p>0703 546 770</p>
+          </div>
+          <div>
+            <img src="/images/icon/location.png" alt="Biểu tượng địa điểm" />
+            <p>Đường 3/2, phường Ninh Kiều, TP. Cần Thơ</p>
+          </div>
+          <div>
+            <img src="/images/icon/email.png" alt="Biểu tượng email" />
+            <p>fahasistore@gmail.com</p>
+          </div>
+          <div>
+            <img src="/images/icon/time.png" alt="Biểu tượng giờ làm việc" />
+            <p>07:00 - 22:00 (Hàng ngày)</p>
+          </div>
+        </div>
+        <div class="contact">
+          <p>© 2026 Fahasi Store. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><img src="/images/icon/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="/images/icon/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#" aria-label="TikTok"
+              ><img src="/images/icon/tiktok.png" alt="TikTok"
+            /></a>
+            <a href="#" aria-label="Messenger"
+              ><img src="/images/icon/messenger.png" alt="Messenger"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

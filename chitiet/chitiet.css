@@ -44,33 +44,30 @@ header {
 }
 .search-box {
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  background-color: #e2e2e2;
+  align-items: center;
+  margin-left: auto;
+  border: 1px solid blue;
 }
 
 .search-box input {
   height: 50px;
   font-size: 18px;
+
   box-sizing: border-box;
   transition: all 0.6s ease-out;
 }
 
 .search-box input[type="text"] {
-  width: 70%;
-  border-right: none;
+  width: 200px
 }
 
 .search-box input[type="submit"] {
-  width: 10%;
+  width: 100px;
   cursor: pointer;
-  background-color: rgb(112, 209, 209);
-  color: white;
 }
 .search-box input[type="submit"]:hover {
-  background-color: rgb(66, 111, 111);
+  background-color: red;
 }
-
 /*phần main*/
 /*section nav trong trang chitiet.html*/
 .nav-main {
@@ -351,68 +348,45 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav {
-    display: flex;
+@media screen and (max-width: 768px) {
+  .header .container {
     flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
   }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
 
-  .nav a {
-    font-size: 16px;
-    padding: 15px;
+    order: 0;
+    margin-right: auto;
   }
-
-  .gio_hang {
-    padding: 10px;
-  }
-  .item {
-    grid-template-columns: 1fr;
-    margin: 40px auto;
-  }
-
-  .left-item,
-  .center-item,
-  .right-item {
+  .nav {
+    display: none;
     width: 100%;
-  }
-
-  .search-box input[type="text"] {
-    width: 70%;
-  }
-
-  .search-box input[type="submit"] {
-    width: 30%;
-  }
-
-  .slider-container {
-    max-width: 100%;
-  }
-
-  .book-card {
-    width: 45%;
-  }
-
-  .btn {
-    width: 40px;
-    height: 40px;
-  }
-  .bottom {
     flex-direction: column;
+    text-align: center;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
   }
 
-  .describe {
-    width: 100%;
-    margin: 0;
+  .nav-input:checked ~ .nav {
+    display: flex;
   }
-
-  .introduction {
-    margin: 20px 0;
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
   }
 }
 @media (max-width: 480px) {
