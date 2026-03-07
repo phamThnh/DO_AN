@@ -15,12 +15,15 @@ body {
   position: sticky;
   top: -16px;
 }
-
+.logo {
+  flex-shrink: 0;
+}
 .logo img {
   height: 70px;
 }
 .gio_hang {
-  padding: 24px;
+  padding: 20px;
+  flex-shrink: 0;
 }
 .gio_hang img {
   width: 48px;
@@ -33,14 +36,17 @@ header {
 .container {
   background-color: rgb(248, 247, 226);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 .nav a {
   text-decoration: none;
-  padding: 28px;
+  padding: 15px;
   font-size: 20px;
   font-weight: 500;
   color: black;
@@ -49,6 +55,36 @@ header {
   text-shadow: 1px 0;
   transition: 0.5s ease;
 }
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.search-box input {
+  height: 50px;
+  font-size: 18px;
+
+  box-sizing: border-box;
+  transition: all 0.6s ease-out;
+}
+
+.search-box input[type="text"] {
+  width: 200px;
+}
+
+.search-box input[type="submit"] {
+  width: 100px;
+  cursor: pointer;
+}
+.search-box input[type="submit"]:hover {
+  background-color: red;
+}
+/*main*/
 /* SECTION */
 .donhang-section {
   padding: 60px 20px;
@@ -86,6 +122,10 @@ header {
   padding: 16px;
   text-align: center;
   border-top: 1px solid #eee;
+}
+.order-table td:nth-of-type(2) {
+  color: blue;
+  font-weight: 600;
 }
 
 .order-table tr:hover {
@@ -133,6 +173,7 @@ header {
 
 .delete-btn:hover {
   background: #b22222;
+  scale: 1.1;
   color: white;
 }
 
@@ -184,20 +225,200 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .order-table th,
-  .order-table td {
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
     padding: 10px;
-    font-size: 13px;
   }
 
-  .footer-container {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  .main {
+    height: 400px;
+  }
+
+  .about h1 {
+    font-size: 30px;
+  }
+
+  .about h2,
+  .about h3 {
+    font-size: 16px;
+  }
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header .container {
+    align-items: center;
+    padding: 10px 15px;
+  }
+  .gio_hang {
+    padding: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  .nav-mobile-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+}
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .header .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+
+    order: 0;
+    margin-right: auto;
+  }
+  .nav {
+    display: none;
+    width: 100%;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .contact {
-    text-align: center;
+  .nav-input:checked ~ .nav {
+    display: flex;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
+  }
+  .search-box {
+    width: 95%;
+    margin: 10px auto;
+    justify-content: center;
+  }
+  .search-box input[type="text"] {
+    width: 70%;
+  }
+
+  .search-box input[type="submit"] {
+    width: 30%;
+  }
+}
+/* Responsive cho main*/
+@media (max-width: 850px) {
+  .donhang-section {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .table-wrapper {
+    max-width: 100%;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .donhang-section {
+    padding: 30px 0;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  @media (max-width: 600px) {
+    .order-table thead {
+      display: none;
+    }
+
+    .order-table,
+    .order-table tbody,
+    .order-table tr {
+      display: block;
+      width: 99%;
+    }
+
+    .order-table tr {
+      margin-left: 1.5%;
+      margin-bottom: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .order-table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border: none;
+    }
+
+    .order-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+    }
   }
 }

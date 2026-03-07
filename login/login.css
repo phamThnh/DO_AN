@@ -7,6 +7,76 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+.header.fixed {
+  position: sticky;
+  top: -16px;
+}
+
+.logo img {
+  height: 70px;
+}
+header {
+  z-index: 100;
+}
+
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.gio_hang {
+  padding: 24px;
+}
+.gio_hang img {
+  width: 28px;
+  padding: 10px;
+}
+/* san pham */
+.container {
+  background-color: rgb(248, 247, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav a {
+  text-decoration: none;
+  padding: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border: 1px solid blue;
+}
+
+.search-box input {
+  height: 50px;
+  font-size: 18px;
+
+  box-sizing: border-box;
+  transition: all 0.6s ease-out;
+}
+
+.search-box input[type="text"] {
+  width: 200px
+}
+
+.search-box input[type="submit"] {
+  width: 100px;
+  cursor: pointer;
+}
+.search-box input[type="submit"]:hover {
+  background-color: red;
+}
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
+/*main*/
 .auth-page{
     background-color: rgb(252, 252, 252);
     min-height: 100vh;
@@ -75,4 +145,114 @@ a {
     color: #3378ff;
     text-decoration: none;
     background-color: transparent;
+}
+/*phần footer*/
+footer {
+  background-color: rgb(248, 247, 226);
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-lienhe {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding: auto;
+  gap: 15px;
+}
+
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 850px) {
+    /*header*/
+  .header .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+
+    order: 0;
+    margin-right: auto;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-input:checked ~ .nav {
+    display: flex;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
+  }
+  .search-box {
+    width: 100%;
+    margin: 10px auto;
+    justify-content: center;
+  }
+  .search-box input[type="text"] {
+    width: 70%;
+  }
+
+  .search-box input[type="submit"] {
+    width: 30%;
+  }
+
+  /*footer*/
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

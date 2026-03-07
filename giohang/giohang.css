@@ -1,59 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  min-width: 10px;
 }
-
-.title {
-  color: blue;
-  text-align: center;
-  padding-left: 10px;
-  font-size: 30px;
-}
-/*Phần header*/
 .header.fixed {
   position: sticky;
   top: -16px;
 }
-
+.logo {
+  flex-shrink: 0;
+}
 .logo img {
   height: 70px;
+}
+.gio_hang {
+  padding: 20px;
+  flex-shrink: 0;
+}
+.gio_hang img {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
 }
 header {
   z-index: 100;
 }
-
-.nav a:hover {
-  text-shadow: 1px 0;
-  transition: 0.5s ease;
-}
-.gio_hang {
-  padding: 24px;
-}
-.gio_hang img {
-  width: 28px;
-  padding: 10px;
-}
-/* san pham */
 .container {
   background-color: rgb(248, 247, 226);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 .nav a {
   text-decoration: none;
-  padding: 28px;
+  padding: 15px;
   font-size: 20px;
   font-weight: 500;
   color: black;
 }
+.nav a:hover {
+  text-shadow: 1px 0;
+  transition: 0.5s ease;
+}
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
 .search-box {
   display: flex;
   align-items: center;
-  margin-left: auto;
   border: 1px solid blue;
 }
 
@@ -66,7 +74,7 @@ header {
 }
 
 .search-box input[type="text"] {
-  width: 200px
+  width: 200px;
 }
 
 .search-box input[type="submit"] {
@@ -89,16 +97,90 @@ header {
   padding-right: 10px;
   background-color: cornflowerblue;
   color: white;
-  
+  line-height: 1.5;
 }
-.layout__sidebar h3,p {
-  animation: slide 0.6s ease;
+.flip span {
+  margin-top: 40px;
+  position: relative;
+  left: calc(100% - 40px);
+  display: inline-block;
+
+  width: 100%;
+
+  --x: 0px;
+  --y: 0px;
+
+  transform: translateX(var(--x)) translateY(var(--y));
+
+  animation:
+    moveX 2s linear infinite,
+    moveY 0.6s ease-in-out infinite alternate;
+}
+.flip span:not(.delay)::before {
+  content: "🚚..";
+  font-size: 34px;
+}
+.flip .delay {
+  animation-delay: 0.5s;
+}
+
+.delay::before {
+  content: "🚢_";
+  font-size: 34px;
+}
+
+/* chạy ngang */
+@keyframes moveX {
+  0% {
+    --x: 0px;
+  }
+  20% {
+    --x: -20%;
+  }
+  40% {
+    --x: -40%;
+  }
+  60% {
+    --x: -60%;
+  }
+  80% {
+    --x: -80%;
+  }
+  100% {
+    --x: -100%;
+  }
+}
+@keyframes moveY {
+  0% {
+    --y: 0px;
+  }
+  20% {
+    --y: -1px;
+  }
+  40% {
+    --y: -0px;
+  }
+  60% {
+    --y: -1px;
+  }
+  80% {
+    --y: 0px;
+  }
+  100% {
+    --y: -1px;
+  }
+}
+.layout__sidebar h3,
+p {
+  animation: slide 1s ease;
 }
 @keyframes slide {
   from {
-    transform: translateX(-100px);
+    opacity: 0;
+    transform: translateX(-200px);
   }
   to {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -109,6 +191,8 @@ header {
 }
 .layout__content .top {
   border: 2px solid black;
+  text-align: center;
+  padding: 15px 0;
 }
 .layout__content .bot {
   border: 2px solid black;
@@ -121,8 +205,8 @@ header {
   background: #f5f5f5;
   color: red;
   text-align: center;
+  padding: 20px 0;
 }
-
 
 /* 1 sản phẩm = 1 hàng */
 .cart__item {
@@ -169,6 +253,10 @@ header {
   color: white;
   border: none;
 }
+.cart-item__quantity button:hover {
+  background-color: rgb(73, 73, 153);
+  transform: scale(0.9) translateY(-1px);
+}
 
 /* Khối 4: Thành tiền */
 .cart-item__total {
@@ -194,6 +282,7 @@ header {
 }
 .cart-item__remove-btn:hover {
   background: darkred;
+  transform: scale(1.2);
 }
 
 /*THông tin thanh toán*/
@@ -225,7 +314,6 @@ header {
   margin-top: 30px;
   background-color: aqua;
   cursor: pointer;
-  
 }
 .btn:hover {
   background-color: darkcyan;
@@ -238,6 +326,9 @@ header {
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
+}
+.featured-books h2 {
+  padding-top: 20px;
 }
 
 .featured-books h2 {
@@ -294,7 +385,8 @@ header {
 
 .featured-books__more {
   text-align: center;
-  margin-top: 25px;
+  font-size: 1.4em;
+  margin: 25px 0;
 }
 
 .featured-books__more a {
@@ -303,8 +395,12 @@ header {
   font-weight: bold;
 }
 @keyframes slideBooks {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 12.5px)); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 12.5px));
+  }
 }
 /*phần footer*/
 
@@ -357,8 +453,8 @@ footer {
 .nav-input {
   display: none;
 }
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 850px) {
+  /*header*/
   .header .container {
     flex-wrap: wrap;
     position: relative;
@@ -382,6 +478,16 @@ footer {
     order: 3;
     animation: fadeIn 0.3s ease;
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   .nav-input:checked ~ .nav {
     display: flex;
@@ -398,13 +504,35 @@ footer {
     order: 0;
     margin-left: auto;
   }
+  .search-box {
+    width: 95%;
+    margin: 10px auto;
+    justify-content: center;
+  }
+  .search-box input[type="text"] {
+    width: 70%;
+  }
+
+  .search-box input[type="submit"] {
+    width: 30%;
+  }
+  /*footer*/
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Mobile nhỏ */
-@media (max-width: 468px) {
-
-
-  /* LAYOUT */
+@media (max-width: 480px) {
+  /* Layout */
   .layout {
     flex-direction: column;
   }
@@ -419,7 +547,7 @@ footer {
     padding: 10px;
   }
 
-  /* CART HEADER ẨN */
+  /* Cart header ẩn */
   .cart__header {
     display: none;
   }
@@ -463,23 +591,22 @@ footer {
     text-align: left;
   }
 
-  /* THÔNG TIN THANH TOÁN */
+  /* Thông tin thanh toán */
   .info {
     margin-left: 0;
     padding: 10px;
   }
 
-  /* BUTTON */
+  /* Button */
   .order_btn {
     text-align: center;
   }
 
   .btn {
     width: 100%;
-    
   }
 
-  /* SÁCH NỔI BẬT */
+  /* Sách nổi bật */
   .featured-books__list {
     gap: 15px;
   }
@@ -487,11 +614,5 @@ footer {
   .featured-books__card {
     width: 100%;
     max-width: 250px;
-  }
-
-  /* FOOTER */
-  .footer-lienhe {
-    flex-direction: column;
-    align-items: center;
   }
 }

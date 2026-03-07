@@ -25,6 +25,10 @@
             ><img src="/images/LogoFahasi.png" alt="Logo fahasi"
           /></a>
         </div>
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
+
+        <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
+
         <nav class="nav">
           <a href="/trangchu.html">TRANG CHỦ</a>
           <a href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
@@ -32,64 +36,67 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
+        <div class="search-box">
+          <input type="text" placeholder="tên sách" />
+          <input type="submit" value="Tìm kiếm" />
+        </div>
         <div class="gio_hang">
           <img src="/images/icon-class-gio-hang.png" alt="" />
           <img src="/images/icon-class-gio-hang2.png" alt="" />
         </div>
       </div>
     </header>
-    <main>
-      <main class="donhang-section">
-        <h1 class="title">Đơn hàng của bạn</h1>
 
-        <div class="table-wrapper">
-          <table class="order-table">
-            <thead>
-              <tr>
-                <th>Mã đơn</th>
-                <th>Ngày đặt</th>
-                <th>Tổng tiền</th>
-                <th>Thanh toán</th>
-                <th>Trạng thái</th>
-                <th>Hành động</th>
-              </tr>
-            </thead>
+    <main class="donhang-section">
+      <h1 class="title">Danh Sách đơn hàng</h1>
 
-            <tbody>
-              <tr>
-                <td>#DH001</td>
-                <td>10/02/2026</td>
-                <td class="price">245.000đ</td>
-                <td>COD</td>
-                <td><span class="status delivering">Đang giao</span></td>
-                <td></td>
-              </tr>
+      <div class="table-wrapper">
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>Mã đơn</th>
+              <th>Ngày đặt</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
 
-              <tr>
-                <td>#DH002</td>
-                <td>05/02/2026</td>
-                <td class="price">799.000đ</td>
-                <td>Chuyển khoản</td>
-                <td><span class="status done">Đã giao</span></td>
-                <td></td>
-              </tr>
+          <tbody>
+            <tr>
+              <td data-label="Mã đơn">#DH001</td>
+              <td data-label="Ngày đặt">10/02/2026</td>
+              <td data-label="Tổng tiền" class="price">245.000đ</td>
+              <td data-label="Trạng thái">
+                <span class="status delivering">Đang giao</span>
+              </td>
+              <td data-label="Hành động"></td>
+            </tr>
 
-              <tr>
-                <td>#DH003</td>
-                <td>12/02/2026</td>
-                <td class="price">150.000đ</td>
-                <td>COD</td>
-                <td><span class="status waiting">Chờ xử lý</span></td>
-                <td>
-                  <button class="delete-btn">Hủy</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
+            <tr>
+              <td data-label="Mã đơn">#DH002</td>
+              <td data-label="Ngày đặt">05/02/2026</td>
+              <td data-label="Tổng tiền" class="price">799.000đ</td>
+              <td data-label="Trạng thái">
+                <span class="status done">Đã giao</span></td>
+              <td data-label="Hành động"></td>
+            </tr>
 
-      <footer>
+            <tr>
+              <td data-label="Mã đơn">#DH003</td>
+              <td data-label="Ngày đặt">12/02/2026</td>
+              <td data-label="Tổng tiền" class="price">150.000đ</td>
+              <td data-label="Trạng thái"><span class="status waiting">Chờ xử lý</span></td>
+              <td data-label="Hành động">
+                <button class="delete-btn">Hủy</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
       <div class="footer-container">
         <div class="footer-lienhe">
           <div>
@@ -131,6 +138,5 @@
         </div>
       </div>
     </footer>
-    </main>
   </body>
 </html>

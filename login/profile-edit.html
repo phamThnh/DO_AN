@@ -15,8 +15,6 @@
       type="image/x-icon"
     />
     <style>
-      
-
       /*header*/
       .header.fixed {
         position: sticky;
@@ -216,12 +214,63 @@
         padding-bottom: 24px;
       }
       /*media*/
-      @media (max-width: 768px) {
+      @media (max-width: 850px) {
         .profile-card {
           width: 95%;
         }
         .row {
           flex-direction: column;
+        }
+        .header .container {
+          flex-wrap: wrap;
+          position: relative;
+        }
+        .nav-mobile-btn {
+          display: inline-block;
+          cursor: pointer;
+          padding: 5px;
+
+          order: 0;
+          margin-right: auto;
+        }
+        .nav {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          text-align: center;
+          background-color: rgb(246, 243, 195);
+          border-top: 1px solid #eee;
+          padding-top: 10px;
+          order: 3;
+          animation: fadeIn 0.3s ease;
+        }
+
+        .nav-input:checked ~ .nav {
+          display: flex;
+        }
+        .nav a {
+          display: block;
+          padding: 15px;
+          border-bottom: 1px solid #f1f1f1;
+        }
+        .logo {
+          order: 0;
+        }
+        .gio_hang {
+          order: 0;
+          margin-left: auto;
+        }
+        .search-box {
+          width: 100%;
+          margin: 10px auto;
+          justify-content: center;
+        }
+        .search-box input[type="text"] {
+          width: 70%;
+        }
+
+        .search-box input[type="submit"] {
+          width: 30%;
         }
       }
     </style>

@@ -51,9 +51,6 @@ header {
   cursor: pointer;
 }
 
-
-
-
 /* ================= MAIN ================= */
 /* ===== ABOUT PAGE ===== */
 
@@ -115,7 +112,7 @@ header {
   width: 100%;
   max-width: 450px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* VALUE GRID */
@@ -137,7 +134,7 @@ header {
   padding: 25px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
 }
 
@@ -157,24 +154,13 @@ header {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
 }
 
 .team-card:hover {
   background: #b22222;
   color: white;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-hero h1 {
-    font-size: 32px;
-  }
 }
 
 /* CONTACT SECTION */
@@ -218,13 +204,83 @@ header {
 .contact-image img {
   max-width: 450px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
   .contact-wrapper {
     flex-direction: column;
+  }
+  .header .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+
+    order: 0;
+    margin-right: auto;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-input:checked ~ .nav {
+    display: flex;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
+  }
+  .search-box {
+    width: 100%;
+    margin: 10px auto;
+    justify-content: center;
+  }
+  .search-box input[type="text"] {
+    width: 70%;
+  }
+
+  .search-box input[type="submit"] {
+    width: 30%;
+  }
+  /*footer*/
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
