@@ -30,7 +30,9 @@
             <img src="/images/LogoFahasi.png" alt="Logo fahasi" />
           </a>
         </div>
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
 
+        <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
         <nav class="nav">
           <a href="/trangchu.html">TRANG CHỦ</a>
           <a href="/gioithieu/gioithieu.html" class="active">GIỚI THIỆU</a>
@@ -38,7 +40,10 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
-
+        <div class="search-box">
+          <input type="text" placeholder="tên sách" />
+          <input type="submit" value="Tìm kiếm" />
+        </div>
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
             ><img src="/images/icon-class-gio-hang.png" alt=""
@@ -125,11 +130,30 @@
       <section class="about-section light">
         <h2 class="center-title">Đội ngũ phát triển</h2>
         <div class="team-grid">
-          <div class="team-card">Nguyễn Phùng Nhựt Bình</div>
-          <div class="team-card">Phạm Nguyễn</div>
-          <div class="team-card">Phạm Võ Minh Thanh</div>
-          <div class="team-card">Đào Văn Khánh An</div>
-          <div class="team-card">Diệp Lê Chấn Bảo</div>
+          <label class="team-card">
+            <input type="checkbox" class="team-cover">
+            <p class="team-name">Nguyễn Phùng Nhựt Bình</p>
+          </label>
+
+          <label class="team-card">
+            <input type="checkbox" class="team-cover">
+            <p class="team-name">Phạm Nguyễn</p>
+          </label>
+
+          <label class="team-card">
+            <input type="checkbox" class="team-cover">
+            <p class="team-name">Phạm Võ Minh Thanh</p>
+          </label>
+
+          <label class="team-card">
+            <input type="checkbox" class="team-cover">
+            <p class="team-name">Đào Văn Khánh An</p>
+          </label>
+
+          <label class="team-card">
+            <input type="checkbox" class="team-cover">
+            <p class="team-name">Diệp Lê Chấn Bảo</p>
+          </label>
         </div>
       </section>
       <!-- LIÊN HỆ & HỢP TÁC -->
@@ -146,9 +170,7 @@
               Nếu bạn quan tâm đến việc hợp tác hoặc có bất kỳ câu hỏi nào, hãy
               liên hệ với chúng tôi ngay hôm nay.
             </p>
-            <a href="mailto:fahasistore@gmail.com" class="contact-btn">
-              Liên hệ ngay
-            </a>
+            
           </div>
 
           <div class="contact-image">

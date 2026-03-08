@@ -1,3 +1,4 @@
+/*Phần header*/
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +16,20 @@ body {
   position: sticky;
   top: -16px;
 }
-
+.logo {
+  flex-shrink: 0;
+}
 .logo img {
   height: 70px;
+}
+.gio_hang {
+  padding: 20px;
+  flex-shrink: 0;
+}
+.gio_hang img {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
 }
 header {
   z-index: 100;
@@ -25,14 +37,17 @@ header {
 .container {
   background-color: rgb(248, 247, 226);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 .nav a {
   text-decoration: none;
-  padding: 28px;
+  padding: 15px;
   font-size: 20px;
   font-weight: 500;
   color: black;
@@ -41,18 +56,13 @@ header {
   text-shadow: 1px 0;
   transition: 0.5s ease;
 }
-.gio_hang {
-  padding: 24px;
-}
-.gio_hang img {
-  width: 48px;
-  padding: 10px;
-  cursor: pointer;
+.nav-mobile-btn,
+.nav-input {
+  display: none;
 }
 .search-box {
   display: flex;
   align-items: center;
-  margin-left: auto;
   border: 1px solid blue;
 }
 
@@ -75,6 +85,7 @@ header {
 .search-box input[type="submit"]:hover {
   background-color: red;
 }
+
 /* Phan main */
 .main {
   height: 600px;
@@ -109,10 +120,22 @@ header {
 }
 /* san pham */
 .sanpham-list {
-  padding: 24px;
+  padding: 40px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+
+}
+.sanpham-list.dif {
+  padding: 40px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  background-color: rgb(235, 190, 106);
+
 }
 .sanpham {
   width: 300px;
@@ -133,6 +156,29 @@ header {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+.title {
+  background: linear-gradient(
+    90deg,
+    black 0%,
+    #652e29 50%,
+    rgb(253, 73, 53) 100%
+  );
+
+  background-size:200%;
+  -webkit-background-clip:text;
+  color:transparent;
+
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer{
+  0%{
+    background-position:-200%;
+  }
+  100%{
+    background-position:200%;
+  }
 }
 .sanpham h2 {
   font-family: "Playfair Display", serif;
@@ -170,6 +216,39 @@ header {
   background-color: aliceblue;
   transition: 0.5s ease;
 }
+.view-all{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  text-align:center;
+  margin:40px 0 60px 0;
+}
+
+.btn-view{
+  display:inline-block;
+  padding:14px 30px;
+
+  text-decoration:none;
+  font-size:18px;
+  font-weight:500;
+
+  color:white;
+  background: linear-gradient(45deg,#ff5f6d,#ffc371);
+
+  border-radius:30px;
+
+  transition: all 0.35s ease;
+
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+.btn-view:hover{
+  transform: translateY(-4px) scale(1.05);
+
+  box-shadow:0 12px 25px rgba(0,0,0,0.25);
+
+  background: linear-gradient(45deg,#ff3c4c,#ffb347);
+}
+
 /*footer*/
 footer {
   background-color: antiquewhite;

@@ -16,49 +16,70 @@
     />
     <style>
       /*header*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
       .header.fixed {
         position: sticky;
         top: -16px;
       }
-
+      .logo {
+        flex-shrink: 0;
+      }
       .logo img {
         height: 70px;
+      }
+      .gio_hang {
+        padding: 20px;
+        flex-shrink: 0;
+      }
+      .gio_hang img {
+        width: 48px;
+        padding: 10px;
+        cursor: pointer;
       }
       header {
         z-index: 100;
       }
-
-      .nav a:hover {
-        text-shadow: 1px 0;
-        transition: 0.5s ease;
-      }
-      .gio_hang {
-        padding: 24px;
-      }
-      .gio_hang img {
-        width: 28px;
-        padding: 10px;
-      }
-      /* san pham */
       .container {
         background-color: rgb(248, 247, 226);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        margin-left: auto;
-        margin-right: auto;
+        flex-wrap: wrap;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
       }
       .nav a {
         text-decoration: none;
-        padding: 28px;
+        padding: 15px;
         font-size: 20px;
         font-weight: 500;
         color: black;
       }
+      .nav a:hover {
+        text-shadow: 1px 0;
+        transition: 0.5s ease;
+      }
+      .nav-mobile-btn,
+      .nav-input {
+        display: none;
+      }
       .search-box {
         display: flex;
         align-items: center;
-        margin-left: auto;
         border: 1px solid blue;
       }
 
@@ -140,7 +161,6 @@
       }
 
       textarea {
-        resize: none;
         height: 80px;
       }
 
@@ -244,6 +264,16 @@
           order: 3;
           animation: fadeIn 0.3s ease;
         }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
         .nav-input:checked ~ .nav {
           display: flex;
@@ -261,7 +291,7 @@
           margin-left: auto;
         }
         .search-box {
-          width: 100%;
+          width: 95%;
           margin: 10px auto;
           justify-content: center;
         }
@@ -271,6 +301,18 @@
 
         .search-box input[type="submit"] {
           width: 30%;
+        }
+        /*Footer*/
+        .footer-lienhe {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        }
+
+        .footer-lienhe > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
       }
     </style>

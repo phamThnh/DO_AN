@@ -95,12 +95,11 @@ header {
   border: 1px dotted black;
   font-style: italic;
   padding-right: 10px;
-  background-color: cornflowerblue;
+  background-color: rgb(174, 176, 134);
   color: white;
   line-height: 1.5;
 }
 .flip span {
-  margin-top: 40px;
   position: relative;
   left: calc(100% - 40px);
   display: inline-block;
@@ -193,6 +192,29 @@ p {
   border: 2px solid black;
   text-align: center;
   padding: 15px 0;
+}
+.layout__content .top h2 {
+  background: linear-gradient(
+    90deg,
+    black 0%,
+    #3a3929 50%,
+    rgb(253, 223, 53) 100%
+  );
+
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 .layout__content .bot {
   border: 2px solid black;
@@ -296,7 +318,7 @@ p {
 }
 .info {
   border: 2px dashed blueviolet;
-  margin-left: 100px;
+  margin: 0 10px;
 }
 .info h3 {
   font-family: Arial, Helvetica, sans-serif;
@@ -304,19 +326,28 @@ p {
   color: red;
 }
 .order_btn {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  margin-top: 10px;
 }
 .btn {
-  width: auto;
-  min-width: 140px;
+  display: inline-block;
+  padding: 14px 30px;
+
+  text-decoration: none;
   font-size: 18px;
-  padding: 8px;
-  margin-top: 30px;
-  background-color: aqua;
+  font-weight: 500;
+
+  color: white;
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  transition: all 0.35s ease;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: darkcyan;
+  transform: scale(1.07);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(45deg, #ff3c4c, #ffb347);
 }
 
 /*section thứ 2*/
