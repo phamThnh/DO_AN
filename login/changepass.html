@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đổi mật khẩu</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #f8f7e2, #ffffff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .change-pass-card {
+        width: 400px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #b22222;
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #3b6fe6;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #3b6fe6;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #2c55c4;
+      }
+
+      .back {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .back a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .back a:hover {
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="change-pass-card">
+      <div class="title">Đổi mật khẩu</div>
+
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label>Mật khẩu hiện tại</label>
+          <input type="password" id="oldPass" placeholder="Nhập mật khẩu cũ" />
+        </div>
+
+        <div class="form-group">
+          <label>Mật khẩu mới</label>
+          <input type="password" id="newPass" placeholder="Nhập mật khẩu mới" />
+        </div>
+
+        <div class="form-group">
+          <label>Xác nhận mật khẩu</label>
+          <input
+            type="password"
+            id="confirmPass"
+            placeholder="Nhập lại mật khẩu"
+          />
+        </div>
+
+        <button type="button" id="btnChange" class="btn">
+          Đổi mật khẩu
+        </button>
+      </form>
+
+      <div class="back">
+        <a href="/login/profile.html">← Quay lại hồ sơ</a>
+      </div>
+    </div>
+
+    <!--JS-->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/JS/data/data.js"></script>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/Core/auth.js"></script>
+    
+    <script src="/JS/page/changepass.js"></script>
+  </body>
+</html>

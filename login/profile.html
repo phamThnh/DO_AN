@@ -182,13 +182,9 @@
         color: white;
       }
 
-      .btn-warning {
-        background: #ff9800;
-        color: white;
-      }
 
       .btn-secondary {
-        background: #777;
+        background: orange;
         color: white;
       }
 
@@ -377,38 +373,37 @@
 
         <div class="info-group">
           <div class="info-label">Họ tên:</div>
-          <div class="info-value">Nguyễn Văn A</div>
+          <div class="info-value" id="hoten_"></div>
         </div>
 
         <div class="info-group">
           <div class="info-label">Giới tính:</div>
-          <div class="info-value">Nam</div>
+          <div class="info-value" id="gender_"></div>
         </div>
 
         <div class="info-group">
           <div class="info-label">Ngày tháng năm sinh:</div>
-          <div class="info-value">01/01/2005</div>
+          <div class="info-value" id="ngaysinh_"></div>
         </div>
 
         <div class="info-group">
           <div class="info-label">SĐT:</div>
-          <div class="info-value">0123456789</div>
+          <div class="info-value" id="sdt_"></div>
         </div>
 
         <div class="info-group">
           <div class="info-label">Email:</div>
-          <div class="info-value">example@gmail.com</div>
+          <div class="info-value" id="email_"></div>
         </div>
 
         <div class="info-group">
           <div class="info-label">Địa chỉ:</div>
-          <div class="info-value">Cần Thơ, Việt Nam</div>
+          <div class="info-value" id="diachi_"></div>
         </div>
         <div class="action-section">
-          <button class="btn btn-edit">Sửa thông tin</button>
-          <button class="btn btn-primary">Đổi mật khẩu</button>
-          <button class="btn btn-warning">Quên mật khẩu</button>
-          <button class="btn btn-secondary">Đăng xuất</button>
+          <button class="btn btn-edit" id="submit__change-info">Sửa thông tin</button>
+          <button class="btn btn-primary" id="submit__change-pass">Đổi mật khẩu</button>
+          <button class="btn btn-secondary" id="submit__logout">Đăng xuất</button>
         </div>
       </div>
     </main>
@@ -454,5 +449,16 @@
         </div>
       </div>
     </footer>
+    <!--JS-->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/JS/data/data.js"></script>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/Core/auth.js"></script>
+    <script src="/JS/utils/format.js"></script>
+
+    <script src="/JS/page/profile.js"></script>
   </body>
 </html>

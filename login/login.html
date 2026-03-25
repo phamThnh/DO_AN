@@ -55,7 +55,7 @@
               <img src="/images/LogoFahasi.png" alt="logo" class="logo" />
             </div>
             <h3 class="auth-title">Login</h3>
-            <form class="auth-form">
+            <form class="auth-form" onsubmit="return false;">
               <div class="form-group">
                 <label class="form-label">Username</label>
                 <input
@@ -68,7 +68,6 @@
               <div class="form-group">
                 <div class="item-justify">
                   <label class="form-label">Password</label>
-                  <label><a href="#">Forgot password</a></label>
                 </div>
                 <input
                   class="form-input"
@@ -80,7 +79,10 @@
             </form>
             <button type="button" id="btnLogin" class="btnlogin">Login</button>
             <div class="auth-switch">
-              <p>You don't have an account? <a href="/register/register.html">Register</a></p>
+              <p>
+                You don't have an account?
+                <a href="/register/register.html">Register</a>
+              </p>
             </div>
           </div>
         </section>
@@ -128,5 +130,16 @@
         </div>
       </div>
     </footer>
+
+    <!--JS-->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/JS/data/data.js"></script>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/Core/auth.js"></script>
+    
+    <script src="/JS/page/login.js"></script>
   </body>
 </html>

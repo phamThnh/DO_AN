@@ -60,6 +60,7 @@
                 <label class="form-label">Email address</label>
                 <input
                   class="form-input"
+                  id="email"
                   type="text"
                   placeholder="Enter email address"
                 />
@@ -68,6 +69,7 @@
                 <label class="form-label">Username</label>
                 <input
                   class="form-input"
+                  id="username"
                   type="text"
                   placeholder="Enter Username"
                 />
@@ -77,6 +79,7 @@
                 <label class="form-label">Password</label>
                 <input
                   class="form-input"
+                  id="password"
                   type="password"
                   placeholder="Enter password"
                 />
@@ -85,13 +88,14 @@
                 <label class="form-label">Re-enter Password</label>
                 <input
                   class="form-input"
+                  id="repassword"
                   type="password"
                   placeholder="Re-enter password"
                 />
               </div>
               <div class="form-group">
                 <div class="form-checkbox">
-                  <input class="form-input checkbox" type="checkbox" />
+                  <input class="form-input checkbox" type="checkbox" id="checkbox" />
                   <label class="form-label"
                     >Đồng ý với <a href="#">Chính sách</a> và
                     <a href="#">Điều khoản dịch vụ</a></label
@@ -99,7 +103,7 @@
                 </div>
               </div>
             </form>
-            <button class="btnregister" type="button">Register</button>
+            <button class="btnregister" type="button" id="register">Register</button>
             <div class="auth-switch">
               <p>
                 Already have an account? <a href="/login/login.html">Login</a>
@@ -151,5 +155,15 @@
         </div>
       </div>
     </footer>
+    <!--JS-->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/JS/data/data.js"></script>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/Core/auth.js"></script>
+
+    <script src="/JS/page/register.js"></script>
   </body>
 </html>
