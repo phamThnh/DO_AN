@@ -229,10 +229,11 @@ footer {
     order: 0;
   }
   .gio_hang {
-    order: 0;
+    order: 1;
     margin-left: auto;
   }
   .search-box {
+    order: 2;
     width: 95%;
     margin: 10px auto;
     justify-content: center;
@@ -265,7 +266,7 @@ footer {
     align-items: center;
   }
 }
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   .item-justify label:nth-of-type(2) {
     position: relative;
     top: 90px;

@@ -383,8 +383,13 @@ footer {
     align-items: center;
     height: 40px;
   }
+  .gio_hang {
+    order: 1;
+    margin-left: auto;
+  }
   .search-box {
-    width: 100%;
+    order: 2;
+    width: 95%;
     margin: 10px auto;
     justify-content: center;
   }

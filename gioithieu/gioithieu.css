@@ -410,10 +410,11 @@ footer {
     order: 0;
   }
   .gio_hang {
-    order: 0;
+    order: 1;
     margin-left: auto;
   }
   .search-box {
+    order: 2;
     width: 95%;
     margin: 10px auto;
     justify-content: center;

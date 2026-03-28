@@ -184,9 +184,8 @@ p {
   }
 }
 .layout__content {
-  max-width: 900px;
+  width: 100%;
   min-width: 50px;
-  margin: auto;
 }
 .layout__content .top {
   border: 2px solid black;
@@ -217,8 +216,7 @@ p {
   }
 }
 .layout__content .bot {
-  border: 2px solid black;
-  border-top: none;
+  width: 100%;
 }
 
 .cart__header {
@@ -234,15 +232,17 @@ p {
 .cart__item {
   display: flex;
   align-items: center;
-
+  width: 100%;
   padding: 16px 0;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 /* Khối 1: Ảnh */
 
 .cart-item__img {
-  width: 140px;
+  width: 15%;
   text-align: center;
 }
 .cart-item__img img {
@@ -252,16 +252,18 @@ p {
 
 /* Khối 2: Thông tin */
 .cart-item__info {
-  width: 400px;
+  width: 50%;
 }
 .book-name {
   font-weight: bold;
-  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Khối 3: Số lượng */
 .cart-item__quantity {
-  width: 150px;
+  width: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,19 +284,19 @@ p {
 
 /* Khối 4: Thành tiền */
 .cart-item__total {
-  width: 120px;
-  text-align: center;
+  width: 15%;
+  text-align: right;
   font-weight: bold;
   color: red;
 }
 
 /* Khối 5: Xóa */
 .cart-item__remove {
-  width: 80px;
-  text-align: right;
+  width: 10%;
+  text-align: center;
   margin-right: 10px;
 }
-.cart-item__remove-btn {
+.cart-item__remove button {
   background: red;
   color: white;
   border: none;
@@ -302,7 +304,7 @@ p {
   cursor: pointer;
   border-radius: 4px;
 }
-.cart-item__remove-btn:hover {
+.cart-item__remove button:hover {
   background: darkred;
   transform: scale(1.2);
 }
@@ -330,6 +332,7 @@ p {
   justify-content: flex-end;
   text-align: center;
   margin-top: 10px;
+  margin-right: 20px;
 }
 .btn {
   display: inline-block;
@@ -532,10 +535,11 @@ footer {
     order: 0;
   }
   .gio_hang {
-    order: 0;
+    order: 1;
     margin-left: auto;
   }
   .search-box {
+    order: 2;
     width: 95%;
     margin: 10px auto;
     justify-content: center;
@@ -546,6 +550,40 @@ footer {
 
   .search-box input[type="submit"] {
     width: 30%;
+  }
+  /*main*/
+  /* Cart header ẩn */
+  .cart__header {
+    display: none;
+  }
+  /* CART ITEM */
+  .cart__item {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .cart-item__img {
+    width: auto;
+    text-align: left;
+  }
+  .cart-item__quantity {
+    width: auto;
+    margin-right: auto;
+  }
+  .cart-item__quantity button {
+    width: 35px;
+    height: 35px;
+  }
+  .cart-item__remove {
+    width: auto;
+  }
+  .cart-item__remove button {
+    width: 100px;
+    height: 40px;
   }
   /*footer*/
   .footer-lienhe {
@@ -563,6 +601,11 @@ footer {
 
 /* Mobile nhỏ */
 @media (max-width: 480px) {
+  .search-box {
+    width: 100%;
+    margin: 10px auto;
+    justify-content: center;
+  }
   /* Layout */
   .layout {
     flex-direction: column;
@@ -576,31 +619,6 @@ footer {
   .layout__content {
     width: 100%;
     padding: 10px;
-  }
-
-  /* Cart header ẩn */
-  .cart__header {
-    display: none;
-  }
-
-  /* CART ITEM */
-  .cart__item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-
-  .cart-item__img {
-    width: 100%;
-    text-align: center;
-  }
-
-  .cart-item__img img {
-    width: 90px;
-    height: auto;
   }
 
   .cart-item__info {

@@ -1,9 +1,13 @@
 const storage = {
-  initData: function () {
+  initData: async function () {
     //products
     let data_products = localStorage.getItem("products");
-    if (data_products == null)
+    if (data_products == null) {
+      const respone = await fetch("/JS/data/data.json");
+      const products = await respone.json();
       localStorage.setItem("products", JSON.stringify(products));
+    }
+      
 
     //users
     let data_users = localStorage.getItem("users");

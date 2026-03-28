@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "title": "38 Lá Thư Rockefeller",
+    "oldPrice": 150000,
+    "salePercent": 0.2,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/38lathu.jpg",
+    "author": "John D. Rockefeller"
+  },
+  {
+    "id": 2,
+    "title": "Cánh Đồng Bất Tận",
+    "oldPrice": 105000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/canhdongbattan.jpg",
+    "author": "Nguyễn Ngọc Tư"
+  },
+  {
+    "id": 3,
+    "title": "Chiến Thắng Con Quỷ Trong Bạn",
+    "oldPrice": 165000,
+    "salePercent": 0.09,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/chienthangconquytrongban.jpg",
+    "author": "Napoleon Hill"
+  },
+  {
+    "id": 4,
+    "title": "Cho Tôi Xin Một Vé Đi Tuổi Thơ",
+    "oldPrice": 115000,
+    "salePercent": 0.15,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/chotoixinmotvedituoitho.jpg",
+    "author": "Nguyễn Nhật Ánh"
+  },
+  {
+    "id": 5,
+    "title": "Đắc Nhân Tâm",
+    "oldPrice": 138000,
+    "salePercent": 0.15,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/dacnhantam.jpg",
+    "author": "Dale Carnegie"
+  },
+  {
+    "id": 6,
+    "title": "Đừng Bao Giờ Đi Ăn Một Mình",
+    "oldPrice": 140400,
+    "salePercent": 0.08,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/dungbaogiodianmotminh.jpg",
+    "author": "Keith Ferrazzi"
+  },
+  {
+    "id": 7,
+    "title": "Bố Già",
+    "oldPrice": 147000,
+    "salePercent": 0.05,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/godfather.jpg",
+    "author": "Mario Puzo"
+  },
+  {
+    "id": 8,
+    "title": "Hành Trình Về Phương Đông",
+    "oldPrice": 121000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/hanhtrinhvephuongdong.jpg",
+    "author": "Baird T. Spalding"
+  },
+  {
+    "id": 9,
+    "title": "Harry Potter",
+    "oldPrice": 220000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/harry-potter.jpg",
+    "author": "J.K. Rowling"
+  },
+  {
+    "id": 10,
+    "title": "Không Gia Đình",
+    "oldPrice": 115500,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/khonggiadinh.jpg",
+    "author": "Hector Malot"
+  },
+  {
+    "id": 11,
+    "title": "Mắt Biếc",
+    "oldPrice": 138000,
+    "salePercent": 0.2,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/matbiet.jpg",
+    "author": "Nguyễn Nhật Ánh"
+  },
+  {
+    "id": 12,
+    "title": "Nghĩ Giàu Làm Giàu",
+    "oldPrice": 135000,
+    "salePercent": 0.08,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/nghigiaulamgiau.jpg",
+    "author": "Napoleon Hill"
+  },
+  {
+    "id": 13,
+    "title": "Người Giàu Có Nhất Thành Babylon",
+    "oldPrice": 132000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/nguoigiauconhatthanhbabylon.jpg",
+    "author": "George S. Clason"
+  },
+  {
+    "id": 14,
+    "title": "Nhà Giả Kim",
+    "oldPrice": 10000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/nhagiakim.jpg",
+    "author": "Paulo Coelho"
+  },
+  {
+    "id": 15,
+    "title": "Sherlock Holmes",
+    "oldPrice": 143000,
+    "salePercent": 0.09,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/sherlockholmes.jpg",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "id": 16,
+    "title": "Trên Đường Băng",
+    "oldPrice": 107000,
+    "salePercent": 0.08,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/trenduongbang.jpg",
+    "author": "Tony Buổi Sáng"
+  },
+  {
+    "id": 17,
+    "title": "Tư Duy Nhanh Và Chậm",
+    "oldPrice": 190000,
+    "salePercent": 0.07,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/tuduynhanhvacham.jpg",
+    "author": "Daniel Kahneman"
+  },
+  {
+    "id": 18,
+    "title": "Kế Toán Vỉa Hè - Thực Hành Báo Cáo Tài Chính Căn Bản Từ Quầy Bán Nước Chanh",
+    "oldPrice": 180000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/ketoanviahe.jpg",
+    "author": "Darrell Mullis, Judith Orloff"
+  },
+  {
+    "id": 19,
+    "title": "Detination B1 - Grammar And Vocabulary With Answer Key",
+    "oldPrice": 162000,
+    "salePercent": 0.12,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/destinationb1.jpg",
+    "author": "Malcom Mann, Steve Taylore-Knowles"
+  },
+  {
+    "id": 20,
+    "title": "Destination B2 - Grammar And Vocabulary with Answer Key",
+    "oldPrice": 162000,
+    "salePercent": 0.12,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/destinationb2.jpg",
+    "author": "Malcome Mann, Steve Taylore-Knowles"
+  },
+  {
+    "id": 21,
+    "title": "Tự Học Từ Vựng Tiếng Anh - Word Formation",
+    "oldPrice": 160000,
+    "salePercent": 0.06,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/tuhoctuvungtienganhwordformation.jpg",
+    "author": "Bùi Thanh Huyền"
+  },
+  {
+    "id": 22,
+    "title": "60 Đề Minh Họa Tốt Nghiệp THPT 2026 - Môn Toán",
+    "oldPrice": 150000,
+    "salePercent": 0.04,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/60deminhhoatotnghiepthpt2026montoan.jpg",
+    "author": "Lê Văn Tuấn, Nguyễn Thế Duy, Bùi Quyết Tiến, Hà Quang Hưng"
+  },
+  {
+    "id": 23,
+    "title": "Tổng Ôn Cấp Tốc - Luyện Thi Đánh Giá Năng Lực Theo Cấu Trúc Đề Thi Đại Học Quốc Gia Hà Nội - Định Lượng Và Định Tính",
+    "oldPrice": 190000,
+    "salePercent": 0.07,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/tongoncaptocluyenthidanhgianangluctheocautrucdethidaihocquocgiahanoidinhluongvadinhtinh.jpg",
+
+    "author": "Nguyễn Thị Khuyên, Nguyễn Đức Tài, Vương Thúy Hằng"
+  },
+  {
+    "id": 24,
+    "title": "Các Bài Văn Chuyên Sâu Nghị Luận Xã Hội Ngữ Văn 9",
+    "oldPrice": 84000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/cacbaivanchuyensaunghiluanxahoinguvan9.jpg",
+    "author": "Nhiều tác giả"
+  },
+  {
+    "id": 25,
+    "title": "Lên Đỉnh Núi Mở Tiệm Bánh Mì - Triết Lí Wazawaza - Những Con Người Hạnh Phúc, 2 Loại Bánh Mì, Và Doanh Thu Thường Niên 300 Triệu Yên",
+    "oldPrice": 110000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/lendinhnuimotiembanhmi.jpg",
+    "author": "Hirata Haruka"
+  },
+  {
+    "id": 26,
+    "title": "Tam Quốc Cơ Mật - Tập 1 - Ngày Rồng Gặp Nạn",
+    "oldPrice": 240000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/tamquoccomattap1.jpg",
+    "author": "Mà Bá Dung"
+  },
+  {
+    "id": 27,
+    "title": "Tam Quốc Cơ Mật - Tập 2 - Rồng Náu Vực Sâu",
+    "oldPrice": 300000,
+    "salePercent": 0.05,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/tamquoccomattap2.jpg",
+    "author": "Mà Bá Dung"
+  },
+  {
+    "id": 28,
+    "title": "Đảo Mộng Mơ (Tái Bản Lần Thứ 38)",
+    "oldPrice": 70000,
+    "salePercent": 0.11,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/daomongmo.jpg",
+    "author": "Nguyễn Nhật Ánh, Đỗ Hoàng Tường"
+  },
+  {
+    "id": 29,
+    "title": "Người Lạ Trên Bè Cứu Sinh",
+    "oldPrice": 80000,
+    "salePercent": 0.1,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/nguoilatrenbecuusinh.jpg",
+    "author": "Mitch Albom"
+  },
+  {
+    "id": 30,
+    "title": "Cậu Là Ánh Bình Minh Của Tôi",
+    "oldPrice": 131000,
+    "salePercent": 0.09,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/caulaanhbinhminhcuatoi.jpg",
+    "author": "Giang Hải Yến"
+  }
+]

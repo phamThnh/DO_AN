@@ -226,24 +226,6 @@ footer {
 
 /* RESPONSIVE */
 @media screen and (max-width: 850px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .nav a {
-    padding: 10px;
-    display: block;
-    border-bottom: 1px solid #eee;
-  }
   .main {
     height: 400px;
   }
@@ -271,24 +253,6 @@ footer {
 @media screen and (max-width: 480px) {
   .nav a {
     font-size: 16px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .header .container {
-    align-items: center;
-    padding: 10px 15px;
-  }
-  .gio_hang {
-    padding: 0;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    height: 40px;
-  }
-  .nav-mobile-btn {
-    display: flex;
-    align-items: center;
-    height: 40px;
   }
 }
 .nav-mobile-btn,
@@ -342,10 +306,11 @@ footer {
     order: 0;
   }
   .gio_hang {
-    order: 0;
+    order: 1;
     margin-left: auto;
   }
   .search-box {
+    order: 2;
     width: 95%;
     margin: 10px auto;
     justify-content: center;
