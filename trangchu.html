@@ -35,7 +35,7 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
-        
+
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
             ><img src="/images/icon-class-gio-hang.png" alt=""
@@ -53,219 +53,50 @@
           <h3>SINCE 2026</h3>
         </div>
       </section>
-      <h1 class="title">---Hôm nay đọc gì?---</h1>
-      <section class="sanpham-list">
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Nhà Giả Kim - Paulo Coelho.jpg" alt="" />
+      
+      <template id="product">
+        <div class="product">
+          <div class="imgproduct">
+            <a href="">
+              <img src="" alt="" />
+            </a>
           </div>
           <div class="about-book">
-            <h2>Nhà Giả Kim</h2>
-            <p>By Paulo Coelho</p>
+            <h2 class="book-title"></h2>
+            <p class="book-author"></p>
             <p>
-              <strong>129,000đ</strong>
-              <input class="sale" type="button" value="-20%" />
+              <strong class="old-price"></strong>
+              <input class="sale" type="button" />
               <br />
-              109,000đ
+              <span class="current-price"></span>
             </p>
           </div>
           <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
         </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Mắt Biếc - Nguyễn Nhật Ánh.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Mắt biếc</h2>
-            <p>By Nguyễn Nhật Ánh</p>
-            <p>
-              <strong>149,000đ</strong>
-              <input class="sale" type="button" value="-35%" />
-              <br />
-              99,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Đắc nhân tâm.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Đắc nhân tâm</h2>
-            <p>By Dale Carnegie</p>
-            <p>
-              <strong>160,000đ</strong>
-              <input class="sale" type="button" value="-25%" />
-              <br />
-              120,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Tải Sách Cánh Đồng Bất Tận PDF.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Cánh đồng bất tận</h2>
-            <p>By Nguyễn Ngọc Tư</p>
-            <p>
-              <strong>130,000đ</strong>
-              <input class="sale" type="button" value="-28%" />
-              <br />
-              90,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
+      </template>
+      <section>
+        <h1 class="title">---Hôm nay đọc gì?---</h1>
+        <div id="product-list1" class="product-list"></div>
         <div class="view-all">
           <a href="/sanpham/sanpham.html" class="btn-view"
             >Xem tất cả sản phẩm</a
           >
         </div>
       </section>
-      <h1 class="title">---Sách nổi bật---</h1>
 
-      <section class="sanpham-list dif">
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Nhà Giả Kim - Paulo Coelho.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Nhà Giả Kim</h2>
-            <p>By Paulo Coelho</p>
-            <p>
-              <strong>129,000đ</strong>
-              <input class="sale" type="button" value="-20%" />
-              <br />
-              109,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Mắt Biếc - Nguyễn Nhật Ánh.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Mắt biếc</h2>
-            <p>By Nguyễn Nhật Ánh</p>
-            <p>
-              <strong>149,000đ</strong>
-              <input class="sale" type="button" value="-35%" />
-              <br />
-              99,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Đắc nhân tâm.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Đắc nhân tâm</h2>
-            <p>By Dale Carnegie</p>
-            <p>
-              <strong>160,000đ</strong>
-              <input class="sale" type="button" value="-25%" />
-              <br />
-              120,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Tải Sách Cánh Đồng Bất Tận PDF.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Cánh đồng bất tận</h2>
-            <p>By Nguyễn Ngọc Tư</p>
-            <p>
-              <strong>130,000đ</strong>
-              <input class="sale" type="button" value="-28%" />
-              <br />
-              90,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-
+      <section class="dif">
+        <h1 class="title">---Sách nổi bật---</h1>
+        <div id="product-list2" class="product-list"></div>
         <div class="view-all">
           <a href="/sanpham/sanpham.html" class="btn-view"
             >Xem tất cả sản phẩm</a
           >
         </div>
       </section>
+
       <h1 class="title">---Sách mới phát hành---</h1>
-
-      <section class="sanpham-list">
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Nhà Giả Kim - Paulo Coelho.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Nhà Giả Kim</h2>
-            <p>By Paulo Coelho</p>
-            <p>
-              <strong>129,000đ</strong>
-              <input class="sale" type="button" value="-20%" />
-              <br />
-              109,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Mắt Biếc - Nguyễn Nhật Ánh.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Mắt biếc</h2>
-            <p>By Nguyễn Nhật Ánh</p>
-            <p>
-              <strong>149,000đ</strong>
-              <input class="sale" type="button" value="-35%" />
-              <br />
-              99,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Đắc nhân tâm.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Đắc nhân tâm</h2>
-            <p>By Dale Carnegie</p>
-            <p>
-              <strong>160,000đ</strong>
-              <input class="sale" type="button" value="-25%" />
-              <br />
-              120,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
-        <div class="sanpham">
-          <div class="imgsanpham">
-            <img src="/images/Tải Sách Cánh Đồng Bất Tận PDF.jpg" alt="" />
-          </div>
-          <div class="about-book">
-            <h2>Cánh đồng bất tận</h2>
-            <p>By Nguyễn Ngọc Tư</p>
-            <p>
-              <strong>130,000đ</strong>
-              <input class="sale" type="button" value="-28%" />
-              <br />
-              90,000đ
-            </p>
-          </div>
-          <input class="add_shopping" type="button" value="Thêm vào giỏ hàng" />
-        </div>
+      <section >
+        <div id="product-list3" class="product-list"></div>
         <div class="view-all">
           <a href="/sanpham/sanpham.html" class="btn-view"
             >Xem tất cả sản phẩm</a
@@ -273,6 +104,9 @@
         </div>
       </section>
     </main>
+
+    <script src="/JS/utils/format.js"></script>
+    <script src="/JS/page/home.js"></script>
     <footer>
       <div class="footer-container">
         <div class="footer-lienhe">

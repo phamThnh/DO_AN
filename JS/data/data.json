@@ -269,5 +269,23 @@
     "currentPrice": 0,
     "image": "/Images/List-SanPham/caulaanhbinhminhcuatoi.jpg",
     "author": "Giang Hải Yến"
+  },
+  {
+    "id": 31,
+    "title": "Đã Ngầu Xin Đừng Hậu Đậu!! - Tập 5",
+    "oldPrice": 100000,
+    "salePercent": 0.12,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/dangauxindunghaudau.jpg",
+    "author": "Kokone Nata"
+  },
+  {
+    "id": 32,
+    "title": "Bến Xe (Tái Bản 2020)",
+    "oldPrice": 80000,
+    "salePercent": 0.11,
+    "currentPrice": 0,
+    "image": "/Images/List-SanPham/benxe1.jpg",
+    "author": "Thương Thái Vi"
   }
 ]

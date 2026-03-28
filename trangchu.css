@@ -61,7 +61,6 @@ header {
   display: none;
 }
 
-
 /* Phan main */
 .main {
   height: 600px;
@@ -95,36 +94,107 @@ header {
   font-style: normal;
 }
 /* san pham */
-.sanpham-list {
-  padding: 40px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 30px;
-
+.product-list {
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
-.sanpham-list.dif {
-  padding: 40px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 25px;
+.dif {
   background-color: rgb(235, 190, 106);
+  padding-bottom: 10px;
+}
+.product {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
 
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
-.sanpham {
-  width: 300px;
-  line-height: 25px;
-  margin: 10px;
+
+/* Hinh anh */
+.imgproduct {
+  background: #f6f6f6;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.imgsanpham {
-  text-align: center;
+
+.product img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product:hover img {
+  transform: scale(1.08);
+}
+
+/* Thong tin sach */
+.about-book {
   padding: 20px;
+  flex-grow: 1;
 }
-.sanpham img {
-  height: 220px;
-  text-align: center;
+
+.about-book h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.about-book p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Gia */
+.about-book strong {
+  color: #999;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.about-book .sale {
+  background: linear-gradient(45deg, #ff3d3d, #ff0000);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.about-book p:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d0021b;
+}
+
+/* Nut them gio */
+.add_shopping {
+  margin: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.add_shopping:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 .title {
   text-align: center;
@@ -132,97 +202,63 @@ header {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  border-radius: 20px;
 }
 .title {
   background: linear-gradient(
     90deg,
-    black 0%,
-    #652e29 50%,
-    rgb(253, 73, 53) 100%
+    rgb(249, 0, 0) 0%,
+    #0529e2 50%,
+    rgb(109, 144, 30) 100%
   );
 
-  background-size:200%;
-  -webkit-background-clip:text;
-  color:transparent;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
 
   animation: shimmer 4s infinite;
 }
 
-@keyframes shimmer{
-  0%{
-    background-position:-200%;
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
   }
-  100%{
-    background-position:200%;
+  100% {
+    background-position: 200%;
   }
 }
-.sanpham h2 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-}
-.sanpham strong {
-  text-decoration: line-through;
-}
-.sanpham .sale {
-  padding: 5px;
-  background-color: red;
-  border-radius: 8px;
-}
-
-.sanpham .add_shopping {
-  width: 90%;
-  padding: 14px;
-  font-size: 18px;
-  color: rgb(188, 32, 32);
-  border-radius: 10px;
-  background-color: white;
-  border-color: rgb(240, 8, 8);
-  border-width: 3px;
-  margin-left: 12px;
-  margin-top: 20px;
-}
-.sanpham .add_shopping:hover {
-  background-color: rgb(173, 25, 25);
-  color: white;
-  font-weight: 300;
-}
-.sanpham:hover {
-  /* border-style: solid; */
-  transform: scale(1.03);
-  background-color: aliceblue;
-  transition: 0.5s ease;
-}
-.view-all{
+.view-all {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  text-align:center;
-  margin:40px 0 60px 0;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.btn-view{
-  display:inline-block;
-  padding:14px 30px;
+.btn-view {
+  display: inline-block;
+  padding: 14px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 
-  text-decoration:none;
-  font-size:18px;
-  font-weight:500;
+  color: white;
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
 
-  color:white;
-  background: linear-gradient(45deg,#ff5f6d,#ffc371);
-
-  border-radius:30px;
+  border-radius: 30px;
 
   transition: all 0.35s ease;
 
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-.btn-view:hover{
+.btn-view:hover {
   transform: translateY(-4px) scale(1.05);
 
-  box-shadow:0 12px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 
-  background: linear-gradient(45deg,#ff3c4c,#ffb347);
+  background: linear-gradient(45deg, #ff3c4c, #ffb347);
 }
 
 /*footer*/
@@ -363,7 +399,6 @@ footer {
     order: 1;
     margin-left: auto;
   }
-  
 }
 .nav-mobile-btn,
 .nav-input {
