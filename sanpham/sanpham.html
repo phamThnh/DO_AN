@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <link
       rel="shortcut icon"
-      href="/do_an-main/images/Fahasi_logo.jpg"
+      href="/DO_AN-main/Images/LogoFahasi.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="CSS/sanpham.css" />
+    <link rel="stylesheet" href="/DO_AN-main/sanpham/sanpham.css" />
     <title>Sản Phẩm</title>
   </head>
   <body>
@@ -15,16 +15,16 @@
       <header class="header fixed">
         <div class="container">
           <div class="logo">
-            <a href="/trangchu.html"
-              ><img src="images/Fahasi_logo.jpg" alt="Logo fahasi"
+            <a href="/DO_AN-main/trangchu.html"
+              ><img src="/DO_AN-main/Images/LogoFahasi.png" alt="Logo fahasi"
             /></a>
           </div>
           <nav class="nav">
-            <a href="trangchu.html">TRANG CHỦ</a>
-            <a href="gioithieu.html">GIỚI THIỆU</a>
-            <a href="sanpham.html">SẢN PHẨM</a>
-            <a href="login.html">ĐĂNG NHẬP</a>
-            <a href="signup.html">ĐĂNG KÍ</a>
+            <a href="/DO_AN-main/trangchu.html">TRANG CHỦ</a>
+            <a href="/DO_AN-main/gioithieu/gioithieu.html">GIỚI THIỆU</a>
+            <a href="/DO_AN-main/sanpham/sanpham.html">SẢN PHẨM</a>
+            <a href="/DO_AN-main/login/login.html">ĐĂNG NHẬP</a>
+            <a href="/DO_AN-main/register/register.html">ĐĂNG KÍ</a>
           </nav>
           <div class="search-container">
             <input
@@ -33,12 +33,12 @@
               placeholder="Tìm kiếm sách bạn yêu thích..."
             />
             <button class="search-button">
-              <img src="images/icon/tl.webp" alt="" />
+              <img src="/DO_AN-main/Images/icon/tl.webp" alt="" />
             </button>
           </div>
           <div class="gio_hang">
-            <img src="images/icon-class-gio-hang.png" alt="" />
-            <img src="images/icon-class-gio-hang2.png" alt="" />
+            <img src="/DO_AN-main/Images/icon-class-gio-hang.png" alt="" />
+            <img src="/DO_AN-main/Images/icon-class-gio-hang2.png" alt="" />
           </div>
         </div>
       </header>
@@ -56,7 +56,7 @@
               <p class="book-author"></p>
               <p>
                 <strong class="old-price"></strong>
-                <input class="sale" type="button" value="" />
+                <input class="salePercent" type="button" value="" />
                 <br />
                 <span class="current-price"></span>
               </p>
@@ -74,19 +74,19 @@
         <div class="footer-container">
           <div class="footer-lienhe">
             <div>
-              <img src="images/icon/telephone.png" alt="" />
+              <img src="/DO_AN-main/Images/icon/telephone.png" alt="" />
               <p>0703 546 770</p>
             </div>
             <div>
-              <img src="images/icon/location.png" alt="" />
+              <img src="/DO_AN-main/Images/icon/location.png" alt="" />
               <p>Đường 3/2, Cần Thơ</p>
             </div>
             <div>
-              <img src="images/icon/email.png" alt="" />
+              <img src="/DO_AN-main/Images/icon/email.png" alt="" />
               <p>fahasistore@gmail.com</p>
             </div>
             <div>
-              <img src="images/icon/time.png" alt="" />
+              <img src="/DO_AN-main/Images/icon/time.png" alt="" />
               <p>07:00 - 22:00</p>
             </div>
           </div>
@@ -94,22 +94,30 @@
             <p>© 2026 Fahasi Store. All rights reserved.</p>
             <div class="social-icons">
               <a href="#" aria-label="Facebook"
-                ><img src="images/icon/facebook.png" alt="Facebook"
+                ><img src="/DO_AN-main/Images/icon/facebook.png" alt="Facebook"
               /></a>
               <a href="#" aria-label="Instagram"
-                ><img src="images/icon/instagram.png" alt="Instagram"
+                ><img
+                  src="/DO_AN-main/Images/icon/instagram.png"
+                  alt="Instagram"
               /></a>
               <a href="#" aria-label="TikTok"
-                ><img src="images/icon/tiktok.png" alt="TikTok"
+                ><img src="/DO_AN-main/Images/icon/tiktok.png" alt="TikTok"
               /></a>
               <a href="#" aria-label="Messenger"
-                ><img src="images/icon/messenger.png" alt="Messenger"
+                ><img
+                  src="/DO_AN-main/Images/icon/messenger.png"
+                  alt="Messenger"
               /></a>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <script src="sanpham.js"></script>
+    <script src="/DO_AN-main/JS/page/sanpham.js"></script>
+    <script src="/DO_AN-main/JS/Core/storage.js"></script>
+    <script src="/DO_AN-main/JS/utils/validator.js"></script>
+    <script src="/DO_AN-main/JS/Core/auth.js"></script>
+    <script src="/DO_AN-main/JS/page/product.js"></script>
   </body>
 </html>
