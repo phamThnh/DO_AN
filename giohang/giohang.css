@@ -59,31 +59,7 @@ header {
 .nav-input {
   display: none;
 }
-.search-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid blue;
-}
 
-.search-box input {
-  height: 50px;
-  font-size: 18px;
-
-  box-sizing: border-box;
-  transition: all 0.6s ease-out;
-}
-
-.search-box input[type="text"] {
-  width: 200px;
-}
-
-.search-box input[type="submit"] {
-  width: 100px;
-  cursor: pointer;
-}
-.search-box input[type="submit"]:hover {
-  background-color: red;
-}
 /*phần main*/
 
 /*layout cho cả trang*/
@@ -538,19 +514,6 @@ footer {
     order: 1;
     margin-left: auto;
   }
-  .search-box {
-    order: 2;
-    width: 95%;
-    margin: 10px auto;
-    justify-content: center;
-  }
-  .search-box input[type="text"] {
-    width: 70%;
-  }
-
-  .search-box input[type="submit"] {
-    width: 30%;
-  }
   /*main*/
   /* Cart header ẩn */
   .cart__header {
@@ -601,11 +564,6 @@ footer {
 
 /* Mobile nhỏ */
 @media (max-width: 480px) {
-  .search-box {
-    width: 100%;
-    margin: 10px auto;
-    justify-content: center;
-  }
   /* Layout */
   .layout {
     flex-direction: column;
