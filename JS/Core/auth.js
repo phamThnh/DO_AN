@@ -58,7 +58,6 @@ const auth = {
       userData.firstLogin = true; // thêm thuộc tính đăng nhập lần đầu
       users.push(userData); // thêm user mới
       storage.set("users", users);
-      storage.set("currentuser", userData);
 
       Swal.fire({
         title: "Đăng ký thành công!",
@@ -97,14 +96,15 @@ const auth = {
       setTimeout(function () {
         storage.set("currentuser", currentUser);
         if (currentUser.firstLogin === true) {
-          delete currentUser.firstLogin;
+          
           let users = storage.get("users") || [];
           const idx = users.findIndex(
             (v) => v.username === currentUser.username,
           );
           users[idx] = currentUser;
-
+          
           storage.set("users", users);
+          
           storage.set("currentuser", currentUser);
 
           window.location.href = "../login/profile-edit.html";

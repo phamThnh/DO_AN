@@ -25,6 +25,9 @@ body {
   padding: 20px;
   flex-shrink: 0;
 }
+.gio_hang a {
+  position: relative;
+}
 .gio_hang img {
   width: 48px;
   padding: 10px;
@@ -252,20 +255,10 @@ footer {
     order: 1;
     margin-left: auto;
   }
-  .search-box {
-    order: 2;
-    width: 95%;
-    margin: 10px auto;
-    justify-content: center;
-  }
   
-  .search-box input[type="text"] {
-    width: 70%;
-  }
+  
 
-  .search-box input[type="submit"] {
-    width: 30%;
-  }
+
   /*footer*/
   .footer-lienhe {
     flex-direction: column;

@@ -25,6 +25,9 @@ body {
   padding: 20px;
   flex-shrink: 0;
 }
+.gio_hang a {
+  position: relative;
+}
 .gio_hang img {
   width: 48px;
   padding: 10px;
@@ -159,6 +162,7 @@ p {
     transform: translateX(0);
   }
 }
+
 .layout__content {
   width: 100%;
   min-width: 50px;
@@ -319,98 +323,87 @@ p {
   font-weight: 500;
 
   color: white;
+  border-radius: 15px;
   background: linear-gradient(45deg, #ff5f6d, #ffc371);
   transition: all 0.35s ease;
   cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.07);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   background: linear-gradient(45deg, #ff3c4c, #ffb347);
 }
 
-/*section thứ 2*/
-/* Sách nổi bật */
-.featured-books {
-  color: blue;
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-}
-.featured-books h2 {
-  padding-top: 20px;
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
 }
 
-.featured-books h2 {
+.empty-cart-box {
   text-align: center;
-  margin-bottom: 30px;
-}
-.featured-books__track {
-  display: flex;
-  width: max-content;
-  gap: 25px;
-  animation: slideBooks 15s linear infinite;
-}
-.featured-books__track:hover {
-  animation-play-state: paused;
-}
-.featured-books__list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 25px;
-}
-
-.featured-books__card {
-  width: 200px;
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  flex-shrink: 0;
-  color: black;
   background: #fff;
-  transition: 0.3s;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    orange 0%,
+    yellow 33.33%,
+    red 66.67%,
+    white 100%
+  );
 }
 
-.featured-books__card img {
-  width: 120px;
-  height: 170px;
-  object-fit: cover;
+.empty-cart-box h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000000;
 }
 
-.featured-books__card h3 {
-  font-size: 16px;
-  margin: 10px 0 5px;
+.btn-shop {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #0800ef, #ff4d4f);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 18px;
 }
 
-.featured-books__card p {
-  color: red;
-  font-weight: bold;
+.btn-shop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(57, 8, 234, 0.4);
 }
-
-.featured-books__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.success_order {
+  
+  position: fixed;    
+  top: 20px;         
+  right: 20px;        
+  background-color: #4CAF50; 
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  z-index: 9999;      
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  animation: success_slide 0.5s ease-out forwards;
 }
-
-.featured-books__more {
-  text-align: center;
-  font-size: 1.4em;
-  margin: 25px 0;
-}
-
-.featured-books__more a {
-  text-decoration: none;
-  color: blue;
-  font-weight: bold;
-}
-@keyframes slideBooks {
+@keyframes success_slide {
   from {
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: translateX(calc(-50% - 12.5px));
+    opacity: 1;
+    transform: translateY(0);
   }
+  
 }
 /*phần footer*/
 
@@ -519,6 +512,8 @@ footer {
   .cart__header {
     display: none;
   }
+  
+
   /* CART ITEM */
   .cart__item {
     flex-direction: column;
@@ -532,6 +527,9 @@ footer {
   .cart-item__img {
     width: auto;
     text-align: left;
+  }
+  .cart-item__info {
+    width: auto;
   }
   .cart-item__quantity {
     width: auto;
@@ -613,13 +611,4 @@ footer {
     width: 100%;
   }
 
-  /* Sách nổi bật */
-  .featured-books__list {
-    gap: 15px;
-  }
-
-  .featured-books__card {
-    width: 100%;
-    max-width: 250px;
-  }
 }

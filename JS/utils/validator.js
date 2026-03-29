@@ -11,6 +11,10 @@ const validator = {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return pattern.test(email);
   },
+  isValidsdt: function(sdt) {
+    const pattern = /^0\d{9}$/;
+    return pattern.test(sdt);
+  },
 
   // kiểm tra mật khẩu trùng nhau
   isMatch: function (v1, v2) {
@@ -38,4 +42,5 @@ const validator = {
   checkLogin: function () {
     return storage.get("currentuser");
   },
+  
 };

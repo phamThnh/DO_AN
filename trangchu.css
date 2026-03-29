@@ -26,6 +26,9 @@ body {
   padding: 20px;
   flex-shrink: 0;
 }
+.gio_hang a {
+  position: relative;
+}
 .gio_hang img {
   width: 48px;
   padding: 10px;
@@ -216,7 +219,7 @@ header {
   -webkit-background-clip: text;
   color: transparent;
 
-  animation: shimmer 4s infinite;
+  animation: shimmer 4s ease-out infinite;
 }
 
 @keyframes shimmer {

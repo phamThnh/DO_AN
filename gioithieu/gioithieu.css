@@ -26,6 +26,9 @@ body {
   padding: 20px;
   flex-shrink: 0;
 }
+.gio_hang a {
+  position: relative;
+}
 .gio_hang img {
   width: 48px;
   padding: 10px;

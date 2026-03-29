@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,11 +15,13 @@
       href="/images/LogoFahasi.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" type="text/css" href="/register/register.css" />
-    <title>Register</title>
+    <link rel="stylesheet" href="/trangchu.css">
+    <link rel="stylesheet" href="/giohang/giohang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
-  <body>
-    <header class="header fixed">
+
+  <body class="page">  
+     <header class="header fixed">
       <div class="container">
         <div class="logo">
           <a href="/trangchu.html"
@@ -35,6 +38,7 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
+      
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
             ><img src="/images/icon-class-gio-hang.png" alt=""
@@ -43,78 +47,56 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="auth-page">
-        <section class="register-content">
-          <div class="auth-card">
-            <div class="auth-brand">
-              <img src="/images/LogoFahasi.png" alt="logo" class="logo" />
-            </div>
-            <h3 class="auth-title">Register</h3>
-            <form class="auth-form">
-              <div class="form-group">
-                <label class="form-label">Email address</label>
-                <input
-                  class="form-input"
-                  id="email"
-                  type="text"
-                  placeholder="Enter email address"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Username</label>
-                <input
-                  class="form-input"
-                  id="username"
-                  type="text"
-                  placeholder="Enter Username"
-                />
-              </div>
+    <main class="cart-page container mt-4">
+      <div class="card shadow p-4">
+      <div id="cart-empty" class="d-flex flex-column justify-content-center align-items-center text-center p-5 border rounded">
+        <p class="mb-3 fs-5">
+          <i class="fa fa-shopping-cart fa-4x mb-3"></i><br>
+          Giỏ hàng của bạn đang trống.
+        </p>
+        <a href="/sanpham/sanpham.html" class="cart-btn-back">
+          <i class="fa fa-reply"></i> Tiếp tục mua hàng
+        </a>
+      </div>
 
-              <div class="form-group">
-                <label class="form-label">Password</label>
-                <input
-                  class="form-input"
-                  id="password"
-                  type="password"
-                  placeholder="Enter password"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Re-enter Password</label>
-                <input
-                  class="form-input"
-                  id="repassword"
-                  type="password"
-                  placeholder="Re-enter password"
-                />
-              </div>
-              <div class="form-group">
-                <div class="form-checkbox">
-                  <input
-                    class="form-input checkbox"
-                    type="checkbox"
-                    id="checkbox"
-                  />
-                  <label class="form-label"
-                    >Đồng ý với <a href="#">Chính sách</a> và
-                    <a href="#">Điều khoản dịch vụ</a></label
-                  >
-                </div>
-              </div>
-            </form>
-            <button class="btnregister" type="button" id="register">
-              Register
-            </button>
-            <div class="auth-switch">
-              <p>
-                Already have an account? <a href="/login/login.html">Login</a>
-              </p>
-            </div>
+      <!-- =============================== -->
+      <!-- DANH SÁCH SẢN PHẨM & TÓM TẮT THANH TOÁN (render bằng JS) -->
+      <!-- =============================== -->
+      <div id="cart-has-items" class="row d-none">
+        <section class="cart-items col-lg-8 mb-4">
+          <h2 class="mb-3">Thông tin sản phẩm</h2>
+          <!-- =============================== -->
+          <!-- HEADER CÁC CỘT SẢN PHẨM        -->
+          <!-- =============================== -->
+          <div class="cart-list-header">
+            <div>Thông tin sản phẩm</div>
+            <div>Giá</div>
+            <div>Số lượng</div>
+            <div>Thành tiền</div>
+            <div></div>
+          </div>
+          <div id="cart-list">
+            <!-- Render từng sản phẩm bằng JS -->
           </div>
         </section>
+        <aside class="cart-summary col-lg-4">
+          <h2 class="mb-3">Thông tin thanh toán</h2>
+          <div class="border p-3 rounded">
+            <div class="d-flex justify-content-between mb-2">
+              <strong>Tổng tiền hàng</strong>
+              <span id="subtotal">0 đ</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <strong>Tổng tiền thanh toán</strong>
+              <span id="total">0 đ</span>
+            </div>
+            <button onclick="location.href='checkout.html'" class="cart-btn-primary w-100 mt-2">THANH TOÁN NGAY</button>
+          </div>
+        </aside>
       </div>
+    </div>
     </main>
+ </body>
     <footer>
       <div class="footer-container">
         <div class="footer-lienhe">
@@ -140,7 +122,7 @@
         </div>
         <div class="contact">
           <p>© 2026 Fahasi Store. All rights reserved.</p>
-          <div>
+          <div class="social-icons">
             <a href="#" aria-label="Facebook"
               ><img src="/images/icon/facebook.png" alt="Facebook"
             /></a>
@@ -157,15 +139,14 @@
         </div>
       </div>
     </footer>
-    <!--JS-->
-    <!-- SweetAlert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script src="/JS/Core/storage.js"></script>
     <script src="/JS/utils/validator.js"></script>
     <script src="/JS/Core/auth.js"></script>
-    <script src="/JS/utils/check.js"></script>
+    <script src="/JS/utils/format.js"></script>
+    <script src="/JS/Core/addCart.js"></script>
+    <script src="/JS/Core/cart.js"></script>
+    <script src="/JS/components/header.js"></script>
 
-    <script src="/JS/page/register.js"></script>
+    <script src="/JS/Core/addCart.js"></script>
   </body>
 </html>

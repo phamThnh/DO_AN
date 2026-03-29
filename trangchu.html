@@ -38,8 +38,10 @@
 
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
-            ><img src="/images/icon-class-gio-hang.png" alt=""
-          /></a>
+            ><img src="/images/icon-class-gio-hang.png" alt="" />
+            <span id="cart-count">0</span>
+          </a>
+
           <img src="/images/icon-class-gio-hang2.png" alt="" />
         </div>
       </div>
@@ -53,13 +55,11 @@
           <h3>SINCE 2026</h3>
         </div>
       </section>
-      
+
       <template id="product">
         <div class="product">
           <div class="imgproduct">
-            <a href="">
-              <img src="" alt="" />
-            </a>
+            <img src="" alt="" />
           </div>
           <div class="about-book">
             <h2 class="book-title"></h2>
@@ -95,7 +95,7 @@
       </section>
 
       <h1 class="title">---Sách mới phát hành---</h1>
-      <section >
+      <section>
         <div id="product-list3" class="product-list"></div>
         <div class="view-all">
           <a href="/sanpham/sanpham.html" class="btn-view"
@@ -105,8 +105,14 @@
       </section>
     </main>
 
-    <script src="/JS/utils/format.js"></script>
+    <script src="/JS/Core/auth.js"></script>
     <script src="/JS/page/home.js"></script>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/utils/format.js"></script>
+    <script src="/JS/utils/check.js"></script>
+    <script src="/JS/components/header.js"></script>
+    <script src="/JS/Core/addCart.js"></script>
     <footer>
       <div class="footer-container">
         <div class="footer-lienhe">

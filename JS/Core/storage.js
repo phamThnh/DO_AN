@@ -17,18 +17,13 @@ const storage = {
     }
 
     //cart
-    let data_cart = localStorage.getItem("cart");
+    let data_cart = localStorage.getItem("cartItems");
     if (data_cart == null) {
       var empty_cart = [];
-      localStorage.setItem("cart", JSON.stringify(empty_cart));
+      localStorage.setItem("cartItems", JSON.stringify(empty_cart));
     }
 
-    //orders
-    let data_orders = localStorage.getItem("orders");
-    if (data_orders == null) {
-      var empty_orders = [];
-      localStorage.setItem("orders", JSON.stringify(empty_orders));
-    }
+    
 
     //current user
     let data_currentuser = localStorage.getItem("currentuser");

@@ -1,5 +1,19 @@
+const currentuser1 = JSON.parse(localStorage.getItem("currentuser"));
+
+if (currentuser1 && currentuser1.firstLogin) {
+  // 1. Ẩn nút "Quay lại hồ sơ" vì hồ sơ chưa có thông tin
+  const backBtn = document.getElementById("back");
+  if (backBtn) backBtn.style.display = "none";
+
+  //ngăn không cho truy cập vào header
+  const header = document.getElementById("header");
+  header.style.display = "none";
+    
+}
+
 const event_edit = document.getElementById("submit");
-event_edit.addEventListener("click", (e) => { // sự kiện khi bấm lưu thông tin
+event_edit.addEventListener("click", (e) => {
+  // sự kiện khi bấm lưu thông tin
   e.preventDefault();
 
   //lấy giá trị từ các ô và lưu vào biến tạm
@@ -24,15 +38,39 @@ event_edit.addEventListener("click", (e) => { // sự kiện khi bấm lưu thô
       confirmButtonColor: "#3b6fe6",
     });
     return;
+  } else if (!validator.isValidsdt(value_sdt)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Số điện thoại không hợp lệ",
+      confirmButtonColor: "#3b6fe6",
+    });
+    return;
   } else {
-    auth.updateUser({ //update giá trị khi các giá trị trong ô đều thỏa đ/k
+    auth.updateUser({
+      //update giá trị khi các giá trị trong ô đều thỏa đ/k
       hoten: value_hoten,
       gioitinh: value_gioitinh,
       ngaysinh: value_ngaysinh,
       sdt: value_sdt,
       diachi: value_diachi,
     });
-    event_edit.disabled = true; //ngăn không cho spam nút bấm liên tục
+    const userSauUpdate = storage.get("currentuser");
+    if (userSauUpdate && userSauUpdate.firstLogin) {
+        delete userSauUpdate.firstLogin;
+        
+        // Cập nhật lại currentuser
+        storage.set("currentuser", userSauUpdate);
+        
+        // Cập nhật lại users
+        let allUsers = storage.get("users") || [];
+        const idx = allUsers.findIndex(u => u.username === userSauUpdate.username);
+        if (idx !== -1) {
+            allUsers[idx] = userSauUpdate;
+            storage.set("users", allUsers);
+        }
+    }
+
     Swal.fire({
       title: "Cập nhật thông tin thành công!",
       icon: "success",

@@ -36,17 +36,43 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
-        
+
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
-            ><img src="/images/icon-class-gio-hang.png" alt=""
-          /></a>
+            ><img src="/images/icon-class-gio-hang.png" alt=""/>
+            <span id="cart-count">0</span> 
+          </a>
           <img src="/images/icon-class-gio-hang2.png" alt="" />
         </div>
       </div>
     </header>
 
     <main>
+      <template id="cart-item">
+        <div class="cart__item">
+          <div class="cart-item__img">
+            <img src="" alt="" />
+          </div>
+
+          <div class="cart-item__info">
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+          </div>
+
+          <div class="cart-item__quantity">
+            <button id="down">-</button>
+            <span>1</span>
+            <button id="up">+</button>
+          </div>
+
+          <div class="cart-item__total"></div>
+
+          <div class="cart-item__remove">
+            <button id="remove">Xóa</button>
+          </div>
+        </div>
+      </template>
       <section class="layout">
         <div class="layout__sidebar">
           <h3>Hỗ trợ:</h3>
@@ -64,7 +90,7 @@
           </div>
         </div>
 
-        <div class="layout__content">
+        <div class="layout__content" >
           <div class="layout__content top">
             <h2>Giỏ hàng của bạn</h2>
           </div>
@@ -75,162 +101,20 @@
               <h2 class="cart-item__quantity">Số lượng</h2>
               <h2 class="cart-item__total">Thành tiền</h2>
             </div>
-            <div class="cart__item">
-              <!-- Khối 1: Ảnh -->
-              <div class="cart-item__img">
-                <img src="" alt="" />
+            <div id="cart-list"></div>
+            <section id="info">
+              <h2 class="h2tt">Thông tin thanh toán:</h2>
+              <div class="info">
+                <h3><strong>Chi phí vận chuyển: 0đ</strong></h3>
+                <h3><strong></strong></h3>
+                <h3><strong></strong></h3>
+                <h3 ><strong id="subtotal"></strong></h3>
               </div>
-
-              <!-- Khối 2: Thông tin sách -->
-              <div class="cart-item__info">
-                <h3 class="book-name">Tên sách:</h3>
-                <h3 class="book-name">Tác giả:</h3>
-                <h3>Đơn giá:</h3>
+              <div class="order_btn" id="order">
+                <button class="btn">Đặt hàng</button>
               </div>
-
-              <!-- Khối 3: Số lượng -->
-              <div class="cart-item__quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-
-              <!-- Khối 4: Thành tiền -->
-              <div class="cart-item__total"></div>
-
-              <!-- Khối 5: Xóa -->
-              <div class="cart-item__remove">
-                <button >Xóa</button>
-              </div>
-            </div>
-            <div class="cart__item">
-              <!-- Khối 1: Ảnh -->
-              <div class="cart-item__img">
-                <img src="" alt="" />
-              </div>
-
-              <!-- Khối 2: Thông tin sách -->
-              <div class="cart-item__info">
-                <h3 class="book-name">Tên sách:</h3>
-                <h3 class="book-name">Tác giả:</h3>
-                <h3>Đơn giá:</h3>
-              </div>
-
-              <!-- Khối 3: Số lượng -->
-              <div class="cart-item__quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-
-              <!-- Khối 4: Thành tiền -->
-              <div class="cart-item__total"></div>
-
-              <!-- Khối 5: Xóa -->
-              <div class="cart-item__remove">
-                <button class="cart-item__remove-btn">Xóa</button>
-              </div>
-            </div>
-            <div class="cart__item">
-              <!-- Khối 1: Ảnh -->
-              <div class="cart-item__img">
-                <img src="" alt="" />
-              </div>
-
-              <!-- Khối 2: Thông tin sách -->
-              <div class="cart-item__info">
-                <h3 class="book-name">Tên sách:</h3>
-                <h3 class="book-name">Tác giả:</h3>
-                <h3>Đơn giá:</h3>
-              </div>
-
-              <!-- Khối 3: Số lượng -->
-              <div class="cart-item__quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-
-              <!-- Khối 4: Thành tiền -->
-              <div class="cart-item__total"></div>
-
-              <!-- Khối 5: Xóa -->
-              <div class="cart-item__remove">
-                <button class="cart-item__remove-btn">Xóa</button>
-              </div>
-            </div>
-
-            <h2 class="h2tt">Thông tin thanh toán:</h2>
-            <div class="info">
-              <h3><strong>Chi phí vận chuyển:</strong></h3>
-              <h3><strong>Địa chỉ:</strong></h3>
-              <h3><strong>SĐT của khách hàng:</strong></h3>
-              <h3><strong>Tổng tiền:</strong></h3>
-            </div>
-            <div class="order_btn">
-              <button class="btn">Đặt hàng</button>
-            </div>
+            </section>
           </div>
-        </div>
-      </section>
-      <hr />
-      <!-- Sách nổi bật -->
-      <section class="featured-books">
-        <h2>Sách nổi bật</h2>
-        <div class="featured-books__track">
-          <div class="featured-books__list">
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 1" />
-              <h3>Đắc Nhân Tâm</h3>
-              <p>45.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 2" />
-              <h3>Nhà Giả Kim</h3>
-              <p>60.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 3" />
-              <h3>Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
-              <p>55.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 4" />
-              <h3>Muôn Kiếp Nhân Sinh</h3>
-              <p>70.000đ</p>
-            </a>
-          </div>
-          <div class="featured-books__list">
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 1" />
-              <h3>Đắc Nhân Tâm</h3>
-              <p>45.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 2" />
-              <h3>Nhà Giả Kim</h3>
-              <p>60.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 3" />
-              <h3>Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
-              <p>55.000đ</p>
-            </a>
-
-            <a href="sanpham.html" class="featured-books__card">
-              <img src="/images/anh_mau.jpg" alt="Sách 4" />
-              <h3>Muôn Kiếp Nhân Sinh</h3>
-              <p>70.000đ</p>
-            </a>
-          </div>
-        </div>
-        <div class="featured-books__more">
-          <a href="/sanpham/sanpham.html">Xem tất cả sản phẩm →</a>
         </div>
       </section>
     </main>
@@ -277,5 +161,13 @@
         </div>
       </div>
     </footer>
+    <script src="/JS/Core/storage.js"></script>
+    <script src="/JS/utils/validator.js"></script>
+    <script src="/JS/Core/auth.js"></script>
+    <script src="/JS/utils/check.js"></script>
+    <script src="/JS/components/header.js"></script>
+
+    <script src="/JS/Core/addCart.js"></script>
+    <script src="/JS/page/cart.js"></script>
   </body>
 </html>

@@ -1,18 +1,8 @@
-//định dạng tiền tệ
-
 const format = {
-  formatMoney: function (number) {
-    let formatter = new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    });
-    if (number == 0 || number == undefined) return formatter.format(0);
-
-    //ép kiểu
-    number = Number(number);
-    return formatter.format(number);
+  //hàm định dạng tiền tệ
+  formatCurrency: function (amount) {
+    return amount.toLocaleString("vi-VN") + "đ";
   },
-
   //định dạng ngày tháng
   formatDate: function (mdy) {
     if (mdy == null || mdy == undefined) return "";

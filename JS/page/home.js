@@ -19,10 +19,31 @@ async function loadrandomProducts(id) {
     clone.querySelector(".imgproduct img").alt = item.title;
     clone.querySelector(".book-title").textContent = item.title;
     clone.querySelector(".book-author").textContent = `By ${item.author}`;
-    clone.querySelector(".old-price").textContent = format.formatMoney(item.oldPrice);
-    clone.querySelector(".sale").textContent = `-${item.salePercent * 100}%`;
-    clone.querySelector(".current-price").textContent = format.formatMoney(price);
+    clone.querySelector(".old-price").textContent = format.formatCurrency(item.oldPrice);
+    clone.querySelector(".sale").value = `-${Math.round(item.salePercent * 100)}%`;
+    clone.querySelector(".current-price").textContent = format.formatCurrency(price);
 
+    const btnAdd = clone.querySelector(".add_shopping");
+
+    btnAdd.addEventListener("click", () => {
+      if (validator.checkLogin()) {
+        const product = {
+          id: item.id,
+          title: item.title,
+          image: item.image,
+          oldPrice: item.oldPrice,
+          salePercent: item.salePercent,
+          author: item.author,
+          currentPrice: item.currentPrice,
+        };
+
+        addToCart(product);
+      }
+      else {
+        alert("Vui lòng đăng nhập!!");
+        window.location.href="/login/login.html";
+      }
+    });
     container.appendChild(clone);
   });
 }
