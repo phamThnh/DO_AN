@@ -218,9 +218,6 @@ header {
   transform: scale(1.02);
 }
 footer {
-  background-color: rgb(248, 247, 226);
-}
-.footer {
   background: rgb(191, 216, 144);
   color: rgb(0, 0, 0);
   text-align: center;
