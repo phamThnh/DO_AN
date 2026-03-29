@@ -136,7 +136,7 @@ header {
     --y: -1px;
   }
   40% {
-    --y: -0px;
+    --y: 0px;
   }
   60% {
     --y: -1px;
@@ -150,7 +150,7 @@ header {
 }
 .layout__sidebar h3,
 p {
-  animation: slide 1s ease;
+  animation: slide 1s ease-out;
 }
 @keyframes slide {
   from {
@@ -169,6 +169,8 @@ p {
 }
 .layout__content .top {
   border: 2px solid black;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   text-align: center;
   padding: 15px 0;
 }
@@ -294,7 +296,7 @@ p {
   color: blue;
   margin-top: 20px;
   margin-bottom: 10px;
-  border-top: 1px solid black;
+  border-top: 2px solid black;
   padding-top: 10px;
   font-style: italic;
 }
