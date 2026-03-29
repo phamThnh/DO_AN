@@ -1,36 +1,43 @@
-//hàm hiển thị sản phẩm ngẫu nhiên
-async function loadrandomProducts(id) {
-  const response = await fetch("/JS/data/data.json");
-  const data = await response.json();
+function loadRandomProduct(dataList, containerId) {
+  const container = document.getElementById(containerId);
+  const template = document.getElementById("product");
 
-  const container = document.getElementById(id);
-  const product = document.getElementById("product");
+  if (!container || !template) return;
+  container.innerHTML = "";
 
-  const sorteddata = data.sort(() => 
-    0.5 - Math.random()).slice(0,4);
-
-
-  sorteddata.forEach((item) => {
-    const clone = product.content.cloneNode(true);
-
-    const price = calculatePrice(item.oldPrice,item.salePercent);
+  dataList.forEach((item) => {
+    const clone = template.content.cloneNode(true);
 
     clone.querySelector(".imgproduct img").src = item.image;
-    clone.querySelector(".imgproduct img").alt = item.title;
     clone.querySelector(".book-title").textContent = item.title;
-    clone.querySelector(".book-author").textContent = `By ${item.author}`;
-    clone.querySelector(".old-price").textContent = format.formatMoney(item.oldPrice);
-    clone.querySelector(".sale").textContent = `-${item.salePercent * 100}%`;
-    clone.querySelector(".current-price").textContent = format.formatMoney(price);
+    clone.querySelector(".old-price").textContent =
+      `${item.oldPrice.toLocaleString()}đ`;
+    clone.querySelector(".current-price").textContent =
+      `${item.currentPrice.toLocaleString()}đ`;
+
+    const saleBtn = clone.querySelector(".sale");
+    if (saleBtn) {
+      saleBtn.value =
+        typeof item.salePercent === "number"
+          ? `-${item.salePercent * 100}%`
+          : item.salePercent;
+    }
 
     container.appendChild(clone);
   });
 }
-//hàm tính currentPrice
+// hàm tính giá hiện tại
 function calculatePrice(oldPrice, salePercent) {
-    return Math.round(oldPrice - oldPrice*salePercent);
+  return Math.round(oldPrice - oldPrice * salePercent);
 }
 
-loadrandomProducts("product-list1");
-loadrandomProducts("product-list2");
-loadrandomProducts("product-list3");
+// trang chủ
+async function initHome() {
+  const featured = await getFeaturedProducts(12);
+
+  loadRandomProduct(featured.slice(0, 4), "product-list1");
+  loadRandomProduct(featured.slice(4, 8), "product-list2");
+  loadRandomProduct(featured.slice(8, 12), "product-list3");
+}
+
+initHome();
