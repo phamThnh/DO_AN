@@ -35,7 +35,16 @@
           <a href="/login/login.html">ĐĂNG NHẬP</a>
           <a href="/register/register.html">ĐĂNG KÍ</a>
         </nav>
-
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Tìm kiếm sách bạn yêu thích..."
+          />
+          <button class="search-button">
+            <img src="/Images/icon/timkiem.webp" alt="" />
+          </button>
+        </div>
         <div class="gio_hang">
           <a href="/giohang/giohang.html"
             ><img src="/images/icon-class-gio-hang.png" alt="" />
@@ -108,14 +117,18 @@
         </div>
       </div>
     </footer>
-    <script src="/JS/Core/storage.js"></script>
-    <script src="/JS/utils/validator.js"></script>
-    <script src="/JS/Core/auth.js"></script>
-    <script src="/JS/utils/format.js"></script>
-    <script src="/JS/utils/check.js"></script>
-    <script src="/JS/components/header.js"></script>
-    <script src="/JS/Core/addCart.js"></script>
+    
+    <script src="/JS/Core/storage.js"></script> <!--Khởi tạo dữ liệu-->
 
-    <script src="/JS/page/product.js"></script>
+    <script src="/JS/utils/validator.js"></script><!--có hàm để kiểm tra đã đăng nhập chưa trong file check.js-->
+    <script src="/JS/utils/check.js"></script> 
+
+    <script src="/JS/Core/auth.js"></script> <!--đăng nhập, đăng xuất-->
+    <script src="/JS/utils/format.js"></script>
+    
+    <script src="/JS/components/header.js"></script> <!--giao diện header khi đăng nhập-->
+    <script src="/JS/Core/addCart.js"></script> <!--Thêm vào giỏ hàng-->
+    <script src="/JS/page/sanphamtimkiem.js"></script> <!--Hiển thị sản phẩm khi tìm kiếm-->
+    <script src="/JS/page/product.js"></script> <!--Giao diện trang sản phẩm-->
   </body>
 </html>

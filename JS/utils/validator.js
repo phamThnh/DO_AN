@@ -1,17 +1,19 @@
+//kiểm tra các ô trong form
+
 const validator = {
   // kiểm tra ô nhập trống
   isEmpty: function (value) {
     return Object.values(value).some((v) => v === "");
   },
-  isEmptyString: function(value) {
-    return !value || value.trim() === ""
+  isEmptyString: function (value) {
+    return !value || value.trim() === "";
   },
   // kiểm tra email hợp lệ
   isValidEmail: function (email) {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return pattern.test(email);
   },
-  isValidsdt: function(sdt) {
+  isValidsdt: function (sdt) {
     const pattern = /^0\d{9}$/;
     return pattern.test(sdt);
   },
@@ -42,5 +44,4 @@ const validator = {
   checkLogin: function () {
     return storage.get("currentuser");
   },
-  
 };

@@ -1,7 +1,7 @@
 const currentuser1 = JSON.parse(localStorage.getItem("currentuser"));
 
-if (currentuser1 && currentuser1.firstLogin) {
-  // 1. Ẩn nút "Quay lại hồ sơ" vì hồ sơ chưa có thông tin
+if (currentuser1 && currentuser1.firstLogin) { //kiểm tra nếu là lần đầu đăng nhập
+  //Ẩn nút "Quay lại hồ sơ" vì hồ sơ chưa có thông tin
   const backBtn = document.getElementById("back");
   if (backBtn) backBtn.style.display = "none";
 
@@ -14,7 +14,7 @@ if (currentuser1 && currentuser1.firstLogin) {
 const event_edit = document.getElementById("submit");
 event_edit.addEventListener("click", (e) => {
   // sự kiện khi bấm lưu thông tin
-  e.preventDefault();
+  e.preventDefault(); 
 
   //lấy giá trị từ các ô và lưu vào biến tạm
   const value_hoten = document.getElementById("hoten").value;
@@ -38,7 +38,7 @@ event_edit.addEventListener("click", (e) => {
       confirmButtonColor: "#3b6fe6",
     });
     return;
-  } else if (!validator.isValidsdt(value_sdt)) {
+  } else if (!validator.isValidsdt(value_sdt)) { //kiểm tra sdt có đúg định danh chưa
     Swal.fire({
       icon: "error",
       title: "Oops...",

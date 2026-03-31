@@ -1,8 +1,8 @@
 //hiển thị sản phẩm lên giỏ hàng
-const template = document.getElementById("cart-item");
-const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
-const cart_list = document.getElementById("cart-list");
-const info = document.getElementById("info");
+const template = document.getElementById("cart-item"); //Lấy mẫu từ template có id cart-item
+const cart = JSON.parse(localStorage.getItem("cartItems")) || []; //lấy giỏ hàng từ localStorage
+const cart_list = document.getElementById("cart-list"); // lấy phần tử tại vị trí có id cart-list
+const info = document.getElementById("info"); //lấy phần tử tại vị trí thông tin thanh toán
 if (cart.length === 0) {
   //giỏ hàng rỗng thì tạo một khối div mới và hiển thị nó lên màn hình
   info.style.display = "none";
@@ -41,7 +41,7 @@ cart.forEach((element, index) => {
   clone.querySelector(".cart-item__info h3:nth-child(3)").textContent =
     "Đơn giá: " + price.toLocaleString() + " đ";
 
-  const quantity = clone.querySelector(".cart-item__quantity span"); //tạo biếnmới để cóthể cậpnhật khi tăg/giảm sốlượng
+  const quantity = clone.querySelector(".cart-item__quantity span");//tạo biếnmới để cóthể cậpnhật khi tăg/giảm sốlượng
   quantity.textContent = element.quantity;
 
   const total = clone.querySelector(".cart-item__total"); //tạo biếnmới để cóthể cập nhật khi tăg/giảm số lượng
@@ -58,8 +58,8 @@ cart.forEach((element, index) => {
     updateTotal(cart); //cập nhật lại tiền hàng khi tăng số lượng
     localStorage.setItem("cartItems", JSON.stringify(cart)); // Lưu lại giỏ hàng mới
 
-    if (typeof updateCartCount === "function") {
-        updateCartCount(); 
+    if (typeof updateCartCount === "function") {  
+        updateCartCount(); //hàm toàn cục có tác dụng cập nhật số trên biểu tượng giỏ hàng
       }
   });
   btn_down.addEventListener("click", () => {
@@ -72,7 +72,7 @@ cart.forEach((element, index) => {
       localStorage.setItem("cartItems", JSON.stringify(cart)); // Lưu lại giỏ hàng mới
 
       if (typeof updateCartCount === "function") {
-        updateCartCount(); 
+        updateCartCount();  //hàm toàn cục có tác dụng cập nhật số trên biểu tượng giỏ hàng
       }
     }
   });
@@ -82,7 +82,7 @@ cart.forEach((element, index) => {
   btn_remove.addEventListener("click", () => {
     cart.splice(index, 1);
     localStorage.setItem("cartItems", JSON.stringify(cart));
-    location.reload();
+    location.reload(); //load lại trang giỏ hàng sau khi bấm xóa
 
     //cập nhật lại tiền hàng khi xóa
     updateTotal(cart);
@@ -113,18 +113,18 @@ info.querySelector(".info h3:nth-child(3) > strong").innerText = "Địa chỉ: 
 const order = document.getElementById("order");
 order.addEventListener("click", () => {
   
-  const success_order = document.createElement("div");
-  success_order.className = "success_order";
-  success_order.innerText = "đặt hàng thành công!!";
+  const success_order = document.createElement("div"); //tạo ra khối div mới
+  success_order.className = "success_order"; // đặt class cho khối div vừa tạo
+  success_order.innerText = "đặt hàng thành công!!"; // thêm nội dung cho khối div
   
   document.body.appendChild(success_order);
 
-  cart.splice(0,cart.length);
-  localStorage.setItem("cartItems", JSON.stringify(cart));
+  cart.splice(0,cart.length); //xóa toàn bộ giỏ hàng từ vị trí 0 
+  localStorage.setItem("cartItems", JSON.stringify(cart)); // lưu lại giỏ hàng vừa đổi
 
   setTimeout(() => {
-    success_order.remove();
+    success_order.remove(); 
     location.reload();
-  }, 1500);
+  }, 1500); //đặt thời gian tồn tại cho khối div vừa tạo là 1500ms
   
 });

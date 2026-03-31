@@ -1,3 +1,5 @@
+//Trang để sửa giao diện header khi đăng nhập thành công
+
 document.addEventListener("DOMContentLoaded", () => {
   const userData = localStorage.getItem("currentuser");
 
@@ -9,10 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const loginBtn = document.querySelector('a[href*="login"]');
       const registerBtn = document.querySelector('a[href*="register"]');
 
-      if (loginBtn) loginBtn.style.display = "none";
+      //ẩn nav đăng nhập và đăng ký
+      if (loginBtn) loginBtn.style.display = "none"; 
       if (registerBtn) registerBtn.style.display = "none";
 
-      if (nav) {
+      if (nav) { //hiển thị ra phần mới  thay cho nav đăng nhập và đăng kí
         nav.insertAdjacentHTML(
           "beforeend",
           `
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const logoutBtn = document.getElementById("logout-btn");
         if (logoutBtn) {
-          logoutBtn.addEventListener("click", (e) => {
+          logoutBtn.addEventListener("click", (e) => { //sự kiện đăng xuất
             e.preventDefault();
             if (confirm("Bạn muốn đăng xuất?")) {
               auth.logout();
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-window.updateCartCount = function() {
+window.updateCartCount = function() { // hàm toàn cục để update số trên biểu tượng giỏ hàng
   let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
   let total = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 

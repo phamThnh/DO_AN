@@ -1,5 +1,5 @@
 const event_register = document.getElementById("register");
-event_register.addEventListener("click", ()=>{
+event_register.addEventListener("click", ()=>{ //sự kiện đăng ký
     auth.register({
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,

@@ -317,49 +317,6 @@ footer {
     gap: 20px;
   }
 }
-@media screen and (max-width: 850px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .nav a {
-    padding: 10px;
-    display: block;
-    border-bottom: 1px solid #eee;
-  }
-  .main {
-    height: 400px;
-  }
-
-  .about h1 {
-    font-size: 30px;
-  }
-
-  .about h2,
-  .about h3 {
-    font-size: 16px;
-  }
-  .footer-lienhe {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .footer-lienhe > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 @media screen and (max-width: 480px) {
   .sanpham {
     width: 100%;
@@ -381,45 +338,34 @@ footer {
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .header .container {
     align-items: center;
     padding: 10px 15px;
-  }
-  .gio_hang {
-    padding: 0;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    height: 40px;
-  }
-  .nav-mobile-btn {
-    display: flex;
-    align-items: center;
-    height: 40px;
-  }
-  .gio_hang {
-    order: 1;
-    margin-left: auto;
-  }
-}
-.nav-mobile-btn,
-.nav-input {
-  display: none;
-}
-@media screen and (max-width: 850px) {
-  .header .container {
     flex-wrap: wrap;
     position: relative;
   }
+
+  .logo {
+    order: 0;
+  }
+
   .nav-mobile-btn {
     display: inline-block;
     cursor: pointer;
     padding: 5px;
-
     order: 0;
     margin-right: auto;
+    height: 40px;
+    align-items: center;
   }
+
   .nav {
     display: none;
     width: 100%;
@@ -432,20 +378,49 @@ footer {
     animation: fadeIn 0.3s ease;
   }
 
-  .nav-input:checked ~ .nav {
-    display: flex;
-  }
   .nav a {
     display: block;
     padding: 15px;
     border-bottom: 1px solid #f1f1f1;
   }
-  .logo {
-    order: 0;
+
+  .nav-input:checked ~ .nav {
+    display: flex;
   }
+
   .gio_hang {
-    order: 0;
+    order: 1;
     margin-left: auto;
+    padding: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .main {
+    height: 400px;
+  }
+
+  .about h1 {
+    font-size: 30px;
+  }
+
+  .about h2,
+  .about h3 {
+    font-size: 16px;
+  }
+
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

@@ -5,3 +5,5 @@ if (!currentuser) {
     alert("vui lòng đăng nhập !!");
   });
 }
+
+//kiểm tra đã đăng nhập chưa

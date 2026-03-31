@@ -1,3 +1,5 @@
+//các hàm định dạng
+
 const format = {
   //hàm định dạng tiền tệ
   formatCurrency: function (amount) {

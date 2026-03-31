@@ -1,3 +1,5 @@
+//Giao diện của trang profile của người dùng
+
 const event_changeinfo = document.getElementById("submit__change-info");
 const event_changepass = document.getElementById("submit__change-pass");
 const event_logout = document.getElementById("submit__logout");

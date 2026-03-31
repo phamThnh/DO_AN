@@ -1,3 +1,5 @@
+//Giao diện của trang sản phẩm
+
 async function loadProducts() {
   const response = await fetch("/JS/data/data.json");
   const data = await response.json();
@@ -5,7 +7,7 @@ async function loadProducts() {
   const container = document.getElementById("product-list");
   const template = document.getElementById("product-template");
 
-  data.forEach((item) => {
+  data.forEach((item) => { // duyệt từng phần tử trong data.json
     const clone = template.content.cloneNode(true);
 
     item.currentPrice = calculatePrice(item.oldPrice, item.salePercent);
@@ -20,7 +22,7 @@ async function loadProducts() {
 
     const btnAdd = clone.querySelector(".add_shopping");
 
-    btnAdd.addEventListener("click", () => {
+    btnAdd.addEventListener("click", () => { //sự kiện thêm vào giỏ hàng
       if (validator.checkLogin()) {
         const product = {
           id: item.id,
