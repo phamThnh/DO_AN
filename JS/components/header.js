@@ -46,8 +46,15 @@ window.updateCartCount = function() { // hàm toàn cục để update số trê
   const badge = document.getElementById("cart-count");
   badge.style.cssText =
     " position: absolute; left: -4px; background-color: red;width: 30px; height: 30px; color: white; font-size: 20px; border-radius: 50%; text-align: center;";
-  if (user && user.username) {
+  const userData = localStorage.getItem("currentuser");
+    if (userData) {
     if (badge) badge.textContent = total;
   }
 }
 
+const icon2 = document.querySelector('img[src="/images/icon-class-gio-hang2.png"]');
+if(icon2) {
+  icon2.addEventListener("click", ()=> {
+    icon2.classList.toggle("icon-pink");
+  })
+}
